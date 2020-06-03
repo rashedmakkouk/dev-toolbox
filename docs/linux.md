@@ -17,8 +17,8 @@ nameserver x.x.x.x
 ```
 
 ### Restart service
-`systemctl restart networking.service`
-`systemctl restart nginx`
+`systemctl restart networking.service`\
+`systemctl restart nginx`\
 `service nginx status`
 
 ### Add user to 'root' group
@@ -28,7 +28,7 @@ nameserver x.x.x.x
 `getent group groupname`
 
 ### Update $PATH
-`export PATH="$PATH:/example/path"`
+`export PATH="$PATH:/example/path"`\
 `echo $PATH`
 
 ### Enable ssh root login
@@ -40,11 +40,11 @@ PasswordAuthentication yes
 ```
 
 ### Restart SSH server
-`/etc/init.d/ssh restart`
+`/etc/init.d/ssh restart`\
 `systemctl restart sshd`
 
 ### Check folder permissions
-`ls -la path`
+`ls -la path`\
 `ls -ld path`
 
 ### Change password
