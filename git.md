@@ -105,10 +105,10 @@
 `git push --tags`
 
 ### Delete tag
-> From working directory:
+> From working directory:\
 `git tag -d <tagname>`
 
-> From remote repository:
+> From remote repository:\
 `git push origin -d <tagname>`
 
 ## Misc
