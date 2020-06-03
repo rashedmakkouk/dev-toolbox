@@ -1,8 +1,10 @@
 # Table of Contents
 
-## Linux commands
+## [Linux](./docs/linux.md)
+> Useful commands and how-to's.
 
-## Git commands
+## [Git](./docs/git.md)
+> Useful commands and how-to's.
 
 ## Docker config & commands
 
