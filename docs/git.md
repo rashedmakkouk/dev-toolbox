@@ -99,7 +99,7 @@
 `git push origin --delete <branch_name>`
 
 ## Tags
-> Semantic versioning guideline: v<major>.<minor>.<patch>
+> Semantic versioning guideline: `v<major>.<minor>.<patch>`
 
 ### Create tag from branch
 `git tag <tag_name>`
