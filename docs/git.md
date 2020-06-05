@@ -6,10 +6,10 @@
 `git config --list`
 
 ### First time configuartion
+> Drop --global to limit config to specific repo\
+
 `git config --global user.name <First Last name>`\
 `git config --global user.email <email@address.xyz>`
-
-> Drop --global to limit config to specific repo
 
 ## Staging
 
@@ -20,34 +20,36 @@
 `git reset --hard`
 
 ### Revert all changes to specific commit in history
-`git reset --hard <commit_ID>`
+`git reset --hard <commit_sha>`
 
-### Unstage file(s) to last commit
-`git reset HEAD filename.ext`\
-`git reset HEAD .`
+### Unstage file(s) or directory to last commit
+`git reset HEAD -- <filename>`\
+`git reset HEAD -- .`
 
 ### Discard changes to unstaged file(s)
-`git checkout -- filename.ext`\
+`git checkout -- <filename>`\
 `git checkout .`
 
-### Remove incorrectly added file
-`git rm filename.ext`
+### Remove file or directory from tree
+> Add to `.gitignore` to bypass in future commits.\
+`git rm <filename>`
+`git rm -r <dirname>`
 
 ### All: Stages all modified, new & deleted files
 `git add .`
 
-### update: Stages modified & deleted files, without new
+### update: Stages modified & deleted files, excluding `new` files
 `git add -u`
 
-### Stage a specific file or folder (repeat as needed)
-`git add filename.ext`\
-`git add foldername`
+### Stage a specific file or folder
+`git add <filename>`\
+`git add <dirname>`
 
 ### Delete & stage file
-`git rm filename.ext`
+`git rm <filename`
 
 ### Delete & stage folder
-`git rm -r foldername`
+`git rm -r <dirname>`
 
 ### Show staged changes
 `git status`
@@ -55,7 +57,7 @@
 ## Commits
 
 ### Revert changes to a specific commit in history
-`git checkout <commit_ID> filename.ext`
+`git checkout <commit_sha> <filename>`
 
 ### Update message only of last commit
 `git commit --amend -m "Updated commit message"`
@@ -80,36 +82,43 @@
 ## Branching
 
 ### Create branch from tag
-`git branch -b <branchname> <tagname>`
+`git branch -b <branch_name> <tag_name>`
 
 ### Merge (while in master)
 > Merges all branch commits into one.\
-`git merge --squash branch`
+`git merge --squash <branch_name>`
 
 ### Branch info
 `git branch -a`
 
 ### Delete branch
-`git branch -d branchname`\
-`git push origin --delete branchname`
+> Delete branch from working directory:\
+`git branch -d <branch_name>`\
+
+> Delete branch from remote repository:\
+`git push origin --delete <branch_name>`
 
 ## Tags
+> Semantic versioning guideline: v<major>.<minor>.<patch>
 
 ### Create tag from branch
-`git tag <tagname>`
+`git tag <tag_name>`
+
+### Create annotated tag from branch
+`git tag -a <tag_name> -m "Message text"`
 
 ### Create tag from commit
-`git tag <tagname> <commit checksum>
+`git tag <tag_name> <commit_sha>`
 
 ### Push tags to remote repository
 `git push --tags`
 
 ### Delete tag
 > From working directory:\
-`git tag -d <tagname>`
+`git tag -d <tag_name>`
 
 > From remote repository:\
-`git push origin -d <tagname>`
+`git push origin -d <tag_name>`
 
 ## Misc
 
