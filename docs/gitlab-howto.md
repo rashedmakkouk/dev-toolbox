@@ -74,6 +74,12 @@ sudo gitlab-rake gitlab:check SANITIZE=true
 ### Create cron jobs
 `crontab -e -u root`
 
+### GitLab backup (cron jobs)
+0 9,15,21 * * 1-7 gitlab-backup create
+0 9,15,21 * * 1-7 gitlab-ctl backup-etc
+0 10,16,22 * * 1-7 mv /var/opt/gitlab/backups/* /mnt/backups/gitlab/
+0 10,16,22 * * 1-7 mv /etc/gitlab/config_backup/* /mnt/configs/gitlab/
+
 ### Gitlab backup (cron jobs)
 0 9,15,21 * * 1-7 gitlab-ctl backup-etc
 0 9,15,21 * * 1-7 gitlab-backup create
