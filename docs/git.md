@@ -5,11 +5,17 @@
 ### Show current configuration
 `git config --list`
 
-### First time configuartion
+### First time user details configuartion
 > Drop --global to limit config to specific repo\
 
 `git config --global user.name <First Last name>`\
 `git config --global user.email <email@address.xyz>`
+
+### Add remote URL
+`git remote add <url>`
+
+### First time set remote upstream
+`git push -u origin master`
 
 ## Staging
 
