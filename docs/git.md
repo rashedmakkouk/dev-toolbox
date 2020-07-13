@@ -6,7 +6,7 @@
 `git config --list`
 
 ### First time user details configuartion
-> Drop --global to limit config to specific repo\
+> Drop --global to limit config to specific repo
 
 `git config --global user.name <First Last name>`\
 `git config --global user.email <email@address.xyz>`
@@ -38,7 +38,8 @@
 
 ### Remove file or directory from tree
 > Add to `.gitignore` to bypass in future commits.\
-`git rm <filename>`
+
+`git rm <filename>`\
 `git rm -r <dirname>`
 
 ### All: Stages all modified, new & deleted files
@@ -59,6 +60,13 @@
 
 ### Show staged changes
 `git status`
+
+### Undo activities
+List all executed commands\
+`git reflog`
+
+Undo changes to specified activity\
+`git reset HEAD@{#}`
 
 ## Commits
 
@@ -91,17 +99,17 @@
 `git branch -b <branch_name> <tag_name>`
 
 ### Merge (while in master)
-> Merges all branch commits into one.\
+Merges all branch commits into one.\
 `git merge --squash <branch_name>`
 
 ### Branch info
 `git branch -a`
 
 ### Delete branch
-> Delete branch from working directory:\
-`git branch -d <branch_name>`\
+Delete branch from working directory:\
+`git branch -d <branch_name>`
 
-> Delete branch from remote repository:\
+Delete branch from remote repository:\
 `git push origin --delete <branch_name>`
 
 ## Tags
@@ -120,10 +128,10 @@
 `git push --tags`
 
 ### Delete tag
-> From working directory:\
+From working directory:\
 `git tag -d <tag_name>`
 
-> From remote repository:\
+From remote repository:\
 `git push origin -d <tag_name>`
 
 ## Misc
