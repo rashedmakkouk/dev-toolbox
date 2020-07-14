@@ -2,42 +2,44 @@
 
 ## Commands and How-to's
 
-service gitlab restart
-# Remember to run sudo gitlab-ctl reconfigure after restoring a configuration backup.
-gitlab-ctl reconfigure
+`service gitlab restart`\
+`gitlab-ctl reconfigure`
+> Remember to run sudo gitlab-ctl reconfigure after restoring a configuration backup.
 
-### BACKUP
-## Folders to backup
+## BACKUP
+
+### Folders to backup
 /etc/gitlab
 
-# https://superuser.com/questions/532040/copy-ssh-keys-from-one-server-to-another-server/532079#532079
+### https://superuser.com/questions/532040/copy-ssh-keys-from-one-server-to-another-server/532079#532079
 /etc/ssh
 
-## STEPS
+### STEPS
 A.
 winpty docker exec -it gitlab bash
 gitlab-ctl backup-etc /var/backups/gitlab (default folder: /etc/gitlab/config_backup)
 
 B.
-# Backup Application
+### Backup Application
 docker exec -t gitlab gitlab-backup create
 
-# Cron job
-# use -qq to suppress error messages
-# separate multiple packages with space
+### Cron job
+### use -qq to suppress error messages
+### separate multiple packages with space
 1. apt-get update && apt-get install -y cron
 
-# https://serverfault.com/questions/449651/why-is-my-crontab-not-working-and-how-can-i-troubleshoot-it
+### https://serverfault.com/questions/449651/why-is-my-crontab-not-working-and-how-can-i-troubleshoot-it
 crontab -e -u root
 0 18 * * 0-6  gitlab-backup create
 0 18 * * 0-6  gitlab-ctl backup-etc /secret/gitlab/backups
 
-# https://devconnected.com/docker-exec-command-with-examples/
-# ./docker-entrypoint.sh
+### https://devconnected.com/docker-exec-command-with-examples/
+### ./docker-entrypoint.sh
 docker exec -i gitlab bash < /docker-entrypoint.sh
 
-# RESTORE
-## DOCKER
+## RESTORE
+
+### DOCKER
 docker exec -it gitlab gitlab-backup restore
 
 ### Packages
@@ -73,6 +75,10 @@ sudo gitlab-rake gitlab:check SANITIZE=true
 
 ### Create cron jobs
 `crontab -e -u root`
+
+### GitLab backup (cron jobs)
+0 9,15,21 * * 1-7 gitlab-backup create >> /mnt/backups/gitlab/backup.log 2>&1
+0 9,15,21 * * 1-7 gitlab-ctl backup-etc >> /mnt/configs/gitlab/backup.log 2>&1 && mv /etc/gitlab/config_backup/* /mnt/configs/gitlab/
 
 ### GitLab backup (cron jobs)
 0 9,15,21 * * 1-7 gitlab-backup create >> /var/opt/gitlab/backups/backup.log 2>&1
