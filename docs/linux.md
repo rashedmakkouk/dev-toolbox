@@ -59,6 +59,9 @@ PasswordAuthentication yes
 ### Set Timezone
 `timedatectl set-timezone UTC`
 
+### Create cron jobs
+`crontab -e -u root`
+
 ### Preserve file attributes while cp
 `cp -r --preserve=mode,ownership,timestamps [from] [to]`
 
