@@ -62,6 +62,21 @@ PasswordAuthentication yes
 ### Create cron jobs
 `crontab -e -u root`
 
+### Check & fix file-system corrupted partition
+1. Boot in recovery mode
+> Linux OS (recovery mode)
+
+2. Login with root account
+
+3. Unmount partition to be checked\
+`umount /dev/partition`
+
+4. Run command\
+`sudo fsck -f /`
+
+5. Reboot\
+`reboot`
+
 ### Preserve file attributes while cp
 `cp -r --preserve=mode,ownership,timestamps [from] [to]`
 
