@@ -20,7 +20,8 @@
 ## Staging
 
 ### Unstage (but retain) all changes since last commit
-`git reset`
+`git reset`\
+`git reset --soft HEAD~1`
 
 ### Unstage (& discard) all changes since last commit
 `git reset --hard`
