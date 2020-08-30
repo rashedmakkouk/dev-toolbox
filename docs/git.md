@@ -104,9 +104,10 @@ Undo changes to specified activity\
 5. Prefix each commit change message with:
 * `Breaking:` - Commit includes changes that could break previous API.
 * `Chore:` - Tasks and coding activity.
+* `Deprecated:` - Remove outdated or refactored code block or package.
 * `Docs:` - Added new entries or updated existing documentation.
 * `Enhancement:` - Improving on or expanding on existing functionality or feature.
-* `Fix:` - Fixed a bug or regression.
+* `Fix:` - Fixed a bug or a regression.
 * `Refactor:` - Updating existing code for readability and code standards; no new functionality added.
 * `Update:` - Replacing existing code with new API (e.g. ES6 features).
 * `Upgrade:` - Includes pa`ckage dependencies, db schema, scripts, etc.
