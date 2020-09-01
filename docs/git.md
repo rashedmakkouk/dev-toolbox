@@ -94,24 +94,6 @@ Undo changes to specified activity\
 > Use open double quotes or \ to write multiline message.\
 > Use -m for the header & second -m for the details (separate paragraphs)
 
-### Guidelines
-1. Use two separate messages for multi-line lists:
-- First message includes a general overview describing the commit.
-- Second message includes detailed information about the commit - described below.
-2. Use `Summary:` for blocks listing commit changes.
-3. Use `Changelog:` for blocks listing changes to include in `CHANGELOG.md` file.
-4. Each commit change message should start with a capital letter.
-5. Prefix each commit change message with:
-* `Breaking:` - Commit includes changes that could break previous API.
-* `Chore:` - Tasks and coding activity.
-* `Deprecated:` - Remove outdated or refactored code block or package.
-* `Docs:` - Added new entries or updated existing documentation.
-* `Enhancement:` - Improving on or expanding on existing functionality or feature.
-* `Fix:` - Fixed a bug or a regression.
-* `Refactor:` - Updating existing code for readability and code standards; no new functionality added.
-* `Update:` - Replacing existing code with new API (e.g. ES6 features).
-* `Upgrade:` - Includes pa`ckage dependencies, db schema, scripts, etc.
-
 ## Branching
 
 ### Create branch from tag
