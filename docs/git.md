@@ -147,3 +147,10 @@ From remote repository:\
 
 ### Reload files after .gitignore change
 `git rm -r --cached .`
+
+### Undo `git rm -r --cached .`
+`git reset HEAD .`
+> If not committed.
+
+`git reset HEAD~1`
+> If commited.
