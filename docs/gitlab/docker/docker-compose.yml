@@ -1,0 +1,47 @@
+version: '3.3'
+services:
+    web:
+        image: 'gitlab/gitlab-ce:latest'
+        build: '.'
+        restart: always
+        hostname: $HOSTNAME
+        container_name: $CONTAINER_NAME
+        tty: true
+        environment:
+            GITLAB_OMNIBUS_CONFIG: |
+                external_url '$EXTERNAL_URL:$HTTP_PORT'
+                nginx['listen_port'] = $HTTP_PORT
+                nginx['redirect_http_to_https'] = false
+                nginx['listen_https'] = false
+                gitlab_rails['gitlab_shell_ssh_port'] = $SSH_PORT
+                gitlab_rails['backup_archive_permissions'] = 0644
+                gitlab_rails['backup_upload_connection'] = {
+                    :provider => 'Local',
+                    :local_root => '$BACKUP_FOLDER'
+                }
+                # The directory inside the mounted folder to copy backups to
+                # Use '.' to store them in the root directory
+                gitlab_rails['backup_upload_remote_directory'] = '.'
+                #gitlab_rails['backup_keep_time'] = $BACKUP_KEEP_TIME
+                redis['tcp_keepalive'] = $TCP_KEEPALIVE
+                nginx['gzip_enabled'] = false
+                puma['enable'] = false
+                unicorn['enable'] = true
+                unicorn['worker_processes'] = 5
+                unicorn['worker_timeout'] = 300
+        ports:
+            #- 'host:container'
+            - '$HTTP_PORT:$HTTP_PORT'
+            - '8443:8443'
+            - '$SSH_PORT:$SSH_PORT'
+            - '4567:4567'
+        volumes:
+            # Root app (container)
+            - '$GITLAB_HOME/gitlab/config:/etc/gitlab:Z'
+            - '$GITLAB_HOME/gitlab/logs:/var/log/gitlab:Z'
+            - '$GITLAB_HOME/gitlab/data:/var/opt/gitlab:Z'
+            # Config & Secrets
+            - 'c:/rashedmakkouk/Backups/gitlab/ssh:/etc/ssh'
+            - 'c:/rashedmakkouk/Backups/gitlab/cron:$CRON_FOLDER'
+            # Backup folders
+            - 'c:/rashedmakkouk/Backups/gitlab:$BACKUP_FOLDER'

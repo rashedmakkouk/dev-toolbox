@@ -1,17 +1,21 @@
 # Table of Contents
 
 ## [Linux](./docs/linux.md)
+
 > Useful commands and how-to's.
 
 ## [Git](./docs/git.md)
+
 > Useful commands and how-to's.
 
-## GitLab
-> Useful commands and references to running self-hosted instance.
-- [Configuration Settings](./docs/gitlab-config.md)
-- [Commands & How-to's](./docs/gitlab-howto.md)
+## [GitLab](./docs/gitlab/index.md)
 
-## Docker config & commands
+> Useful commands and references including running self-hosted instance.
+
+## Docker
+
+> Useful commands and how-to's.
 
 ## [VirtualBox](./docs/virtualbox.md)
-> Useful commands and default configurations.
+
+> Useful commands and configurations.

@@ -1,9 +1,12 @@
 # Linux
 
-### Configure network interface IP
-`nano /etc/network/interfaces`
+## CONFIG
 
-```
+### Network interface
+
+> nano /etc/network/interfaces
+
+```shell
 auto eth0
   iface eth0 inet static
     address x.x.x.x
@@ -11,58 +14,75 @@ auto eth0
     gateway x.x.x.x
 ```
 
-### Configure DNS
-```
+### DNS
+
+> nano /etc/resolv.conf
+
+```shell
 nameserver x.x.x.x
 ```
 
-### Restart service
-`systemctl restart networking.service`\
-`systemctl restart nginx`\
-`service nginx status`
-
-### Add user to 'root' group
-`/usr/sbin/adduser username group`
-
-### List users in group
-`getent group groupname`
-
 ### Update $PATH
+
 `export PATH="$PATH:/example/path"`\
 `echo $PATH`
 
 ### Enable ssh root login
-`nano /etc/ssh/sshd_config`
 
-```
+> nano /etc/ssh/sshd_config
+
+```ascii
 PermitRootLogin yes
 PasswordAuthentication yes
 ```
 
+### Set Timezone
+
+`timedatectl set-timezone UTC`
+
+## SYSTEM
+
+### Restart service
+
+`systemctl restart networking.service`\
+`systemctl restart nginx`\
+`service nginx status`
+
 ### Restart SSH server
+
 `/etc/init.d/ssh restart`\
 `systemctl restart sshd`
-
-### Check folder permissions
-`ls -la path`\
-`ls -ld path`
-
-### Change password
-`passwd`
-
-### Switch user
-`su - username`
-
-### Logout user
-`logout`
-
-### Set Timezone
-`timedatectl set-timezone UTC`
 
 ### Create cron jobs
 `crontab -e -u root`
 
-### Check & fix file-system corrupted partition
+Examples:
+* Run simple command at scheduled time:\
+`0 18 * * 0-6  <command>`
+
+* Run command and log results to file:\
+`0 18 * * 0-6  <command> >> /path/to/output.log 2>&1`
+> Use >> to append messages to output file, else > to overwrite.
+
+File descriptors:
+* 1: Standard output (stdout).
+* 2: Standard error (stderr).
+
+### Install missing dependencies
+`apt --fix-broken install`\
+`sudo apt-get install -f`
+
+### OS Upgrade
+> [Upgrades from previous releases](https://www.debian.org/releases/lenny/amd64/release-notes/ch-upgrading.en.html)
+
+## File System
+
+### Check disk
+```Shell
+fsck -f /dev/disk
+```
+
+### Check & fix corrupted partition
 1. Boot in recovery mode
 > Linux OS (recovery mode)
 
@@ -77,8 +97,18 @@ PasswordAuthentication yes
 5. Reboot\
 `reboot`
 
-### Preserve file attributes while cp
-`cp -r --preserve=mode,ownership,timestamps [from] [to]`
+### Check folder permissions
+
+`ls -la path`\
+`ls -ld path`
+
+### Conditional mkdir
+```Shell
+if not exist path/to/dir mkdir path\\to\\dir
+```
+
+### Preserve file attributes on copy
+`cp -r --preserve=mode,ownership,timestamps <source> <destination>`
 
 Available attributes:
 - mode
@@ -87,3 +117,13 @@ Available attributes:
 - context
 - links
 - all
+
+## USER
+
+| Task                    | Command                               |
+|---                      |---                                    |
+| Change password         |   `passwd`                            |
+| Switch user             | `su - username`                       |
+| List users in group     | `getent group groupname`              |
+| Add user to group       | `/usr/sbin/adduser username group`    |
+| Logout user             | `logout`                              |
