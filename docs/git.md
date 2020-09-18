@@ -27,9 +27,7 @@
 
 ### Set remote upstream
 
-> Full command is required on first push only, use `git push` afterwards.
-
-`git push -u origin master`
+`git push --set-upstream origin master`
 
 ## REPOSITORIES
 
