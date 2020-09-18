@@ -8,12 +8,18 @@
 `git remote show origin`\
 `git config --get remote.origin.url`
 
-### First time user details configuartion
-
-> Drop --global to limit config to specific repo
+### Add user details
 
 `git config --global user.name <First Last name>`\
 `git config --global user.email <email@address.xyz>`
+
+> Drop --global to limit config to specific repository
+
+### Add commit template
+
+`git config --global commit.template <path/to/.gitmessage.txt>`
+
+> Drop --global to limit config to specific repository
 
 ### Add remote URL
 
@@ -21,14 +27,15 @@
 
 ### Set remote upstream
 
-> Full command is required on first push only, use `git push` afterwards.\
+> Full command is required on first push only, use `git push` afterwards.
+
 `git push -u origin master`
 
 ## REPOSITORIES
 
 ### Create a new repository
 
-```
+```shell
 git clone git@xxx.xxx.xxx.xxx:path/to/repo.git
 
 cd docs
@@ -39,7 +46,8 @@ git push -u origin master
 ```
 
 ### Push an existing folder
-```
+
+```shell
 cd existing_folder
 git init
 git clone git@xxx.xxx.xxx.xxx:path/to/repo.git
@@ -49,7 +57,8 @@ git push -u origin master
 ```
 
 ### Push an existing Git repository
-```
+
+```shell
 cd existing_repo
 git remote rename origin old-origin
 git clone git@xxx.xxx.xxx.xxx:path/to/repo.git
