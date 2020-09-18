@@ -139,7 +139,7 @@ Undo changes to specified activity\
 ### Update files & message of last commit
 
 `git add <missed-out-file.ext>`\
-`git commit -amend -m "Updated commit files & message"`
+`git commit --amend -m "Updated commit files & message"`
 
 ### View list of commits
 
