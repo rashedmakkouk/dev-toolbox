@@ -1,6 +1,14 @@
 # Gitlab - Config
 
+
+### SSH files
+
+> /etc/ssh
+
+> [Copy SSH keys from one server to another server](https://superuser.com/questions/532040/copy-ssh-keys-from-one-server-to-another-server/532079#532079)
+
 ## [CONFIG TEMPLATE][gitlab-rb-template]
+
 > /etc/gitlab.rb
 
 > Stop GitLab services by executing `gitlab-ctl stop` command before making and saving changes.\
