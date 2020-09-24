@@ -1,6 +1,7 @@
 # Install RUNNER
 
 1. Add official repository
+
 ```shell
 curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh | sudo bash
 ```
@@ -20,6 +21,7 @@ sudo /var/cache/apt/archives/dpkg -i gitlab-runner_<arch>.deb
 ```
 
 5. Install latest version:
+
 ```shell
 sudo -E apt-get install gitlab-runner
 ```

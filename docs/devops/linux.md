@@ -75,16 +75,35 @@ File descriptors:
 ### OS Upgrade
 > [Upgrades from previous releases](https://www.debian.org/releases/lenny/amd64/release-notes/ch-upgrading.en.html)
 
+#### OS Config
+
+* /etc/ssh/sshd_config
+```ascii
+PermitRootLogin yes
+```
+* Update path
+```shell
+export PATH="$PATH:/usr/sbin"
+```
+
 ## File System
 
+### Delete all hidden files (starts with `.`)
+
+```shell
+rm -rf /.[!.]*
+```
+
 ### Check disk
-```Shell
+
+```shell
 fsck -f /dev/disk
 ```
 
 ### Check & fix corrupted partition
+
 1. Boot in recovery mode
-> Linux OS (recovery mode)
+> `Linux OS (recovery mode)`
 
 2. Login with root account
 
@@ -102,7 +121,8 @@ fsck -f /dev/disk
 `ls -la path`\
 `ls -ld path`
 
-### Conditional mkdir
+### Conditional `mkdir`
+
 ```Shell
 if not exist path/to/dir mkdir path\\to\\dir
 ```

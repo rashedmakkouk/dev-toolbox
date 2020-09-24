@@ -1,25 +1,20 @@
 # Table of Contents
 
-## [Linux](./docs/linux.md)
+## [DevOps](./docs/index.md)
 
-> Useful commands and how-to's.
+* GitLab
+* Docker
+* Linux
+* VirtualBox
 
-## [Git](./docs/git.md)
+## [ENV](./docs/env/index.md)
 
-> Useful commands and how-to's.
-
-## [GitLab](./docs/gitlab/index.md)
-
-> Useful commands and references including running self-hosted instance.
-
-## [Docker](./docs/docker/index.md)
-
-> Useful commands and how-to's.
-
-## [VirtualBox](./docs/virtualbox.md)
-
-> Useful commands and configurations.
+* Git
+* Monorepo
 
 ## [How-to](./docs/how-to/index.md)
 
 > Step-by-step tutorials and guides.
+
+* Git
+* GitLab
