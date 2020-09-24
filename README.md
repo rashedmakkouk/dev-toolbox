@@ -1,6 +1,6 @@
 # Table of Contents
 
-## [DevOps](./docs/index.md)
+## [DevOps](./docs/devops/index.md)
 
 * GitLab
 * Docker
