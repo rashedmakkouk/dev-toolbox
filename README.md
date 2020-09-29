@@ -11,6 +11,7 @@
 
 * Git
 * Monorepo
+* Yarn
 
 ## [How-to](./docs/how-to/index.md)
 
@@ -18,3 +19,7 @@
 
 * Git
 * GitLab
+
+## [Resources](./docs/resources/index.md)
+
+* Useful Links
