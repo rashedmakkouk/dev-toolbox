@@ -1,4 +1,4 @@
-# RESTORE BACKUP
+# Restore Backup
 
 > Run `gitlab-cli reconfigure` at least once before executing a restore.
 

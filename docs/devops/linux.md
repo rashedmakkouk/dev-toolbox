@@ -72,6 +72,18 @@ File descriptors:
 `apt --fix-broken install`\
 `sudo apt-get install -f`
 
+### Install packages
+
+```shell
+apt-get update && apt-get install -y <package>
+```
+
+```shell
+sudo dpkg -i <package>
+```
+
+> Update installed packages before installing new ones.
+
 ### OS Upgrade
 > [Upgrades from previous releases](https://www.debian.org/releases/lenny/amd64/release-notes/ch-upgrading.en.html)
 

@@ -2,6 +2,7 @@
 
 ## [DevOps](./docs/devops/index.md)
 
+* Git
 * GitLab
 * Docker
 * Linux
@@ -9,8 +10,8 @@
 
 ## [ENV](./docs/env/index.md)
 
-* Git
 * Monorepo
+* Nginx
 * Yarn
 
 ## [How-to](./docs/how-to/index.md)
