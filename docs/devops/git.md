@@ -202,6 +202,38 @@ From working directory:\
 From remote repository:\
 `git push origin -d <tag_name>`
 
+## Stash
+
+### Save changes to stach
+
+`git stash save "<message>"`
+
+### View stashed changes
+
+`git stash list`
+
+### View summary of changes
+
+`git stash show <stash>`
+
+> Include `-p` (for patch) option to view changes in diff-style patch layout.
+
+
+### Retrieve stashed changes
+
+* Apply changes and leave a copy in the stash\
+`git stash apply <stash>`
+
+* Apply changes and remove files from the stash\
+`git stash pop <stach>`
+
+> Use `merge` procedures to resolve conflicts.
+
+### Delete stashed changes
+
+`git stash drop <stash>`\
+`git stash clear`
+
 ## Misc
 
 ### List files to update from `.gitignore`
