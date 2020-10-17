@@ -2,25 +2,32 @@
 
 ## [DevOps](./docs/devops/index.md)
 
-* Git
-* GitLab
-* Docker
-* Linux
-* VirtualBox
+- GitLab
+- Docker
+- Git
+- Linux
+- Node Package
+- VirtualBox
 
 ## [ENV](./docs/env/index.md)
 
-* Monorepo
-* Nginx
-* Yarn
+- Nginx
+- Yarn
 
 ## [How-to](./docs/how-to/index.md)
 
 > Step-by-step tutorials and guides.
 
-* Git
-* GitLab
+- Git
+- GitLab
+- Linux
 
 ## [Resources](./docs/resources/index.md)
 
-* Useful Links
+- Useful Links
+
+## [Style Guide](./docs/style-guide/index.md)
+
+- Markdown
+- Monorepo
+- Version Control
