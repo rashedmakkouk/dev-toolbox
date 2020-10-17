@@ -100,6 +100,16 @@ export PATH="$PATH:/usr/sbin"
 
 ## File System
 
+### List OS disks
+
+`df`
+
+> Lists only usable disks.
+
+`fdisk -l`
+
+> Lists all attached disks.
+
 ### Delete all hidden files (starts with `.`)
 
 ```shell

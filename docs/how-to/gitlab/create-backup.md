@@ -26,6 +26,6 @@ Included files:
 Runs backup command, log to file & move to external directory:
 
 ```ascii
-0 9,15,21 * * 1-7 gitlab-backup create >> /var/opt/gitlab/backups/backup.log 2>&1 && mv /var/opt/gitlab/backups/*.tar /mnt/backups/gitlab/
-0 9,15,21 * * 1-7 gitlab-ctl backup-etc >> /etc/gitlab/config_backup/backup.log 2>&1 && mv /etc/gitlab/config_backup/*.tar /mnt/configs/gitlab/
+0 9,15,21 * * 1-7 gitlab-backup create >> /var/opt/gitlab/backups/backup.log 2>&1 && mv /var/opt/gitlab/backups/*.tar /mnt/shared/gitlab/
+0 9,15,21 * * 1-7 gitlab-ctl backup-etc >> /etc/gitlab/config_backup/backup.log 2>&1 && mv /etc/gitlab/config_backup/*.tar /mnt/shared/gitlab/
 ```
