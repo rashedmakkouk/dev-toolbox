@@ -22,12 +22,11 @@
 - GitLab
 - Linux
 
-## [Resources](./docs/resources/index.md)
-
-- Useful Links
-
 ## [Style Guide](./docs/style-guide/index.md)
 
 - Markdown
-- Monorepo
 - Version Control
+
+## [Resources](./docs/resources/index.md)
+
+- Useful Links

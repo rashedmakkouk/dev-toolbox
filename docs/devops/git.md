@@ -4,13 +4,13 @@
 
 ### Show current configuration
 
-`git config --list`\
-`git remote show origin`\
+`git config --list`  
+`git remote show origin`  
 `git config --get remote.origin.url`
 
 ### Add user details
 
-`git config --global user.name <First Last name>`\
+`git config --global user.name <First Last name>`  
 `git config --global user.email <email@address.xyz>`
 
 > Drop --global to limit config to specific repository
@@ -68,7 +68,7 @@ git push -u origin --tags
 
 ### Unstage (but retain) all changes since last commit
 
-`git reset`\
+`git reset`  
 `git reset --soft HEAD~1`
 
 ### Unstage (& discard) all changes since last commit
@@ -81,19 +81,19 @@ git push -u origin --tags
 
 ### Unstage file(s) or directory to last commit
 
-`git reset HEAD -- <filename>`\
+`git reset HEAD -- <filename>`  
 `git reset HEAD -- .`
 
 ### Discard changes to unstaged file(s)
 
-`git checkout -- <filename>`\
+`git checkout -- <filename>`  
 `git checkout .`
 
 ### Remove file or directory from tree
 
-> Add to `.gitignore` to bypass in future commits.\
+> Add to `.gitignore` to bypass in future commits.  
 
-`git rm <filename>`\
+`git rm <filename>`  
 `git rm -r <dirname>`
 
 ### All: Stages all modified, new & deleted files
@@ -106,7 +106,7 @@ git push -u origin --tags
 
 ### Stage a specific file or folder
 
-`git add <filename>`\
+`git add <filename>`  
 `git add <dirname>`
 
 ### Show staged changes
@@ -115,10 +115,10 @@ git push -u origin --tags
 
 ### Undo activities
 
-List all executed commands\
+List all executed commands  
 `git reflog`
 
-Undo changes to specified activity\
+Undo changes to specified activity  
 `git reset HEAD@{#}`
 
 ## Commits
@@ -133,23 +133,23 @@ Undo changes to specified activity\
 
 ### Update files only of last commit
 
-`git add <missed-out-file.ext>`\
+`git add <missed-out-file.ext>`  
 `git commit --amend --no-edit`
 
 ### Update files & message of last commit
 
-`git add <missed-out-file.ext>`\
+`git add <missed-out-file.ext>`  
 `git commit --amend -m "Updated commit files & message"`
 
 ### View list of commits
 
-`git log --oneline`\
-`git log`\
+`git log --oneline`  
+`git log`  
 `git log --stat`
 
 ### Messages
 
-> Use open double quotes or \ to write multiline message.\
+> Use open double quotes or    to write multiline message.  
 > Use -m for the header & second -m for the details (separate paragraphs)
 
 ## Branching
@@ -160,7 +160,7 @@ Undo changes to specified activity\
 
 ### Merge (while in master)
 
-Merge all branch commits into one:\
+Merge all branch commits into one:  
 `git merge --squash <branch_name>`
 
 ### Branch info
@@ -169,10 +169,10 @@ Merge all branch commits into one:\
 
 ### Delete branch
 
-Delete branch from working directory:\
+Delete branch from working directory:  
 `git branch -d <branch_name>`
 
-Delete branch from remote repository:\
+Delete branch from remote repository:  
 `git push origin --delete <branch_name>`
 
 ## Tags
@@ -196,10 +196,10 @@ Delete branch from remote repository:\
 
 ### Delete tag
 
-From working directory:\
+From working directory:  
 `git tag -d <tag_name>`
 
-From remote repository:\
+From remote repository:  
 `git push origin -d <tag_name>`
 
 ## Stash
@@ -221,34 +221,49 @@ From remote repository:\
 
 ### Retrieve stashed changes
 
-* Apply changes and leave a copy in the stash\
+* Apply changes and leave a copy in the stash  
 `git stash apply <stash>`
 
-* Apply changes and remove files from the stash\
+* Apply changes and remove files from the stash  
 `git stash pop <stach>`
 
 > Use `merge` procedures to resolve conflicts.
 
 ### Delete stashed changes
 
-`git stash drop <stash>`\
+`git stash drop <stash>`  
 `git stash clear`
 
 ## Misc
 
 ### List files to update from `.gitignore`
 
-`git ls-files -i -z --exclude-from=.gitignore`
+```shell
+git ls-files -i -z --exclude-from=.gitignore
+```
 
 ### Remove updated files in `.gitignore`
 
-`git ls-files -i -z --exclude-from=.gitignore | xargs -0 git rm --cached`
+- Method #1  
+```shell
+git ls-files -i --exclude-from=.gitignore | xargs -0 git rm -r -n --cached
+```
 
-> Commit changes then push to origin to remove from remote repository.
+- Method #2
+```shell
+git rm -r -n --cached `git ls-files -i --exclude-from=.gitignore`
+```
+
+> -i: ignored  
+> -r: recursive  
+> -n: dry run; list affected files
+
+
+Commit changes and push to origin to remove/update from remote repository.
 
 ### Clear working tree cache
 
-`git rm -r --cached .`
+`git rm -r --cached <directory>`
 
 ### Undo clear working tree cache
 
