@@ -8,6 +8,10 @@
 
 ## Best Practices
 
+### Design
+
+- [Design Tokens beyond colors, typography, and spacing](https://medium.com/bumble-tech/design-tokens-beyond-colors-typography-and-spacing-ad7c98f4f228)
+
 ### Security
 
 - [GitGuardian / APISecurityBestPractices](https://github.com/GitGuardian/APISecurityBestPractices)
@@ -26,6 +30,7 @@
 
 ## Learn
 
+- [Coursera Remote Work](https://learn.gitlab.com/coursera-remote-work)
 - [donnemartin / system-design-primer](https://github.com/donnemartin/system-design-primer)
 - [kamranahmedse / developer-roadmap](https://github.com/kamranahmedse/developer-roadmap)
 
