@@ -1,3 +1,3 @@
 # Resources
 
-## [Useful Links](./useful-links.md)
+## [Useful Links](./useful-links/index.md)

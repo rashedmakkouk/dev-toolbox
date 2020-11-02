@@ -261,6 +261,27 @@ git rm -r -n --cached `git ls-files -i --exclude-from=.gitignore`
 
 Commit changes and push to origin to remove/update from remote repository.
 
+### List modified files
+
+- By duration
+
+```shell
+git diff $(git log -1 --before=@{last.day} --format=%H) --stat | uniq
+```
+
+- Since specified time
+
+```shell
+git diff $(git log -1 --before=@{4.hours.ago} --format=%H) --stat | uniq
+```
+
+#### Datetime keywords
+
+day  
+hour  
+week  
+month  
+
 ### Clear working tree cache
 
 `git rm -r --cached <directory>`
