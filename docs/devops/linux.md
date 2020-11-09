@@ -98,6 +98,18 @@ PermitRootLogin yes
 export PATH="$PATH:/usr/sbin"
 ```
 
+### List running processes on specific port
+
+```shell
+netstat -ano | findstr :3001
+```
+
+- Kill running process:
+
+```shell
+tskill PID
+```
+
 ## File System
 
 ### List OS disks
