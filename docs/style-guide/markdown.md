@@ -141,7 +141,9 @@ There must be at least 3 dashes separating each header cell. The outer pipes (|)
 
 Quote break.
 
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can _put_ **Markdown** into a blockquote.
+> This is a very long line that will still be quoted properly when it wraps. Oh
+boy let's keep writing to make sure this is long enough to actually wrap for
+everyone. Oh, you can _put_ **Markdown** into a blockquote.
 
 ---
 
@@ -161,8 +163,28 @@ Quote break.
 
 Here's a line for us to start with.
 
-This line is separated from the one above by two newlines, so it will be a _separate paragraph_.
+This line is separated from the one above by two newlines, so it will be a
+_separate paragraph_.
 
-This line is also a separate paragraph, but... This line is only separated by a single newline, so it's a separate line in the _same paragraph_.
+This line is also a separate paragraph, but... This line is only separated by a
+single newline, so it's a separate line in the _same paragraph_.
 
 ---
+
+## Embed `.md?x` documents in other documents
+
+> Docusaurus supports [transclusion](https://mdxjs.com/getting-started#documents)
+out of the box. Import is limited to documents located inside `docs` directory.
+
+```jsx
+import License from './license.md'
+import Contributing from './policies/contributing.mdx'
+
+Hello, world!
+
+<License />
+
+---
+
+<Contributing />
+```

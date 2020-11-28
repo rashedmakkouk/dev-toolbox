@@ -172,6 +172,12 @@ Available attributes:
 - links
 - all
 
+### cifs-utils
+
+```shell
+mount -t cifs //<host>/<shared-dir> /mnt/<mount-dir> -o username=<username>,password=<password>,doamin=<domain>,rw,file_mode=0777,dir_mode=0777
+```
+
 ## USER
 
 | Task                    | Command                               |

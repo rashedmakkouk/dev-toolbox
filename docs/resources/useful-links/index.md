@@ -2,6 +2,8 @@
 
 ## [Best Practices](./best-practices.md)
 
+## [Design](./design.md)
+
 ## [Development](./development.md)
 
 ## [Learn](./learn.md)

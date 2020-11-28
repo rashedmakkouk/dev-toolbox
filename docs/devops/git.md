@@ -147,6 +147,12 @@ Undo changes to specified activity
 `git log`  
 `git log --stat`
 
+### Compare file from two different commits
+
+```shell
+git diff <commit#1>:<file-path> <commit#2>:<file-path>
+```
+
 ### Messages
 
 > Use open double quotes or    to write multiline message.  
