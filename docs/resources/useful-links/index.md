@@ -4,6 +4,8 @@
 
 ## [Design](./design.md)
 
+## [DevOps](./devops.md)
+
 ## [Development](./development.md)
 
 ## [Learn](./learn.md)
