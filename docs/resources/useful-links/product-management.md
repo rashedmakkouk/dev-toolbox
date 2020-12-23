@@ -6,6 +6,6 @@
 - [Product School San Francisco](https://www.youtube.com/c/ProductSchoolSanFrancisco)
 - [GitLab Unfiltered](https://www.youtube.com/c/GitLabUnfiltered)
 
-## Artifacts
+## Ceremonies
 
 - [danluu / post-mortems](https://github.com/danluu/post-mortems)
