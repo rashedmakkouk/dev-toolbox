@@ -23,6 +23,10 @@ yarn plugin list
 yarn plugin import <name>
 ```
 
+```shell
+yarn plugin remove @yarnpkg/<name>
+```
+
 - [@yarnpkg/plugin-interactive-tools](https://yarnpkg.com/api/modules/plugin_interactive_tools.html)
 
 ```shell
@@ -42,6 +46,8 @@ yarn workspaces foreach run build
 ```shell
 yarn add <package> [--dev] -W
 ```
+
+> Flag `-W` is not supported in `Yarn 2`, simply add dependency in monorepo root directory.
 
 ### Add dependency to specific `workspace`
 
