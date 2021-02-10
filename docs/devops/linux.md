@@ -110,7 +110,7 @@ netstat -ano | findstr :3001
 tskill PID
 ```
 
-## File System
+## FILE SYSTEM
 
 ### List OS disks
 
@@ -176,6 +176,18 @@ Available attributes:
 
 ```shell
 mount -t cifs //<host>/<shared-dir> /mnt/<mount-dir> -o username=<username>,password=<password>,doamin=<domain>,rw,file_mode=0777,dir_mode=0777
+```
+
+### Create Symbolic Link
+
+```shell
+sudo ln -s /path/to/link/file.txt /path/to/target/file.txt
+
+sudo ln -s /path/to/link/directory /path/to/target/directory
+```
+
+```shell
+sudo unlink|rm /path/to/target/(file.txt|directory)
 ```
 
 ## USER

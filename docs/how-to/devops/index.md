@@ -1,4 +1,4 @@
-# DevOps
+# DevOps - How-to
 
 ## [Create RSA Keys](./create-rsa-keys.md)
 

@@ -8,8 +8,10 @@
 
 ## [Linux](./linux.md)
 
-## [Nginx](./nginx.md)
+## [Nginx](./nginx)
 
 ## [Node Package](./node-package.md)
 
 ## [VirtualBox](./virtualbox.md)
+
+## [Windows](./windows.md)

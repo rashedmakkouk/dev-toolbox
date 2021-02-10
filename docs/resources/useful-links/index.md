@@ -8,7 +8,7 @@
 
 ## [DevOps](./devops.md)
 
-## [Learn](./learn.md)
+## [Learning](./learning.md)
 
 ## [Product Management](./product-management.md)
 

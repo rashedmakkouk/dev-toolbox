@@ -10,12 +10,13 @@
 ## [DevOps](./docs/devops/index.md)
 
 - GitLab
+- Nginx
 - Docker
 - Git
 - Linux
-- Nginx
 - Node Package
 - VirtualBox
+- Windows
 
 ## [How-to](./docs/how-to/index.md)
 
