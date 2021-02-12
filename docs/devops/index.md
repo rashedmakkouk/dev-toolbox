@@ -1,10 +1,10 @@
 # DevOps
 
-## [GitLab](./gitlab/index.md)
-
 ## [Docker](./docker.md)
 
 ## [Git](./git.md)
+
+## [GitLab](./gitlab/index.md)
 
 ## [Linux](./linux.md)
 

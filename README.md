@@ -9,10 +9,10 @@
 
 ## [DevOps](./docs/devops/index.md)
 
-- GitLab
-- Nginx
 - Docker
 - Git
+- GitLab
+- Nginx
 - Linux
 - Node Package
 - VirtualBox

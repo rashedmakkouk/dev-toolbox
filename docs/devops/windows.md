@@ -1,6 +1,6 @@
 # Windows
 
-## COMMANDS
+## OS
 
 ### Open Startup Folder
 
@@ -26,7 +26,7 @@ taskkill /f /pid <pid>
 taskkill /f /im <name>
 ```
 
-## SYSTEM FILE
+## Filesystem
 
 ### Create Symbolic Link
 
@@ -34,4 +34,14 @@ taskkill /f /im <name>
 mklink link.txt c:\path\to\target\file.txt
 
 mklink /d directory c:\path\to\target\directory
+```
+
+## Windows Subsystem for Linux (WSL)
+
+### Commands
+
+```shell
+wsl --list --version
+wsl --list --running
+wsl -l --all
 ```
