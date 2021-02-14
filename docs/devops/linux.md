@@ -1,10 +1,113 @@
 # Linux
 
-## CONFIG
+## Commands
+
+### Restart service
+
+```shell
+systemctl restart networking.service
+systemctl restart nginx
+service nginx status
+```
+
+### Restart SSH server
+
+```shell
+/etc/init.d/ssh restart
+systemctl restart sshd
+```
+
+### List running processes on specific port
+
+```shell
+netstat -ano | findstr :3001
+```
+
+### Kill running process
+
+```shell
+tskill PID
+```
+
+### Create cron jobs
+
+```shell
+crontab -e -u root
+```
+
+**Examples:**
+
+Run simple command at scheduled time:
+
+```ascii
+0 18 * * 0-6  <command>
+```
+
+Run command and log results to file:
+
+```ascii
+0 18 * * 0-6  <command> >> /path/to/output.log 2>&1
+```
+
+> Use >> to `append` messages to output file, else > to `overwrite`.
+
+File descriptors:
+
+- 1: Standard output (stdout).
+- 2: Standard error (stderr).
+
+## OS
+
+### Install packages
+
+> Update installed packages before installing new ones.
+
+```shell
+apt-get update && apt-get install <package> <another-package>
+```
+
+```shell
+dpkg -i <package>
+```
+
+Commit package upgrades:
+
+```shell
+apt-get upgrade
+```
+
+### Install missing dependencies
+
+```shell
+apt --fix-broken install
+apt-get install -f
+```
+
+## System
+
+### Upgrade OS version
+
+> [Upgrades from previous releases](https://www.debian.org/releases/lenny/amd64/release-notes/ch-upgrading.en.html)
+
+### Enable SSH root login
+
+> /etc/ssh/sshd_config
+
+```ascii
+PermitRootLogin yes
+PasswordAuthentication yes
+```
+
+### Update `$PATH`
+
+```shell
+export PATH="$PATH:/usr/sbin"
+echo $PATH
+```
 
 ### Network interface
 
-> nano /etc/network/interfaces
+> /etc/network/interfaces
 
 ```shell
 auto eth0
@@ -16,111 +119,29 @@ auto eth0
 
 ### DNS
 
-> nano /etc/resolv.conf
+> /etc/resolv.conf
 
 ```shell
 nameserver x.x.x.x
 ```
 
-### Update $PATH
-
-`export PATH="$PATH:/example/path"`\
-`echo $PATH`
-
-### Enable ssh root login
-
-> nano /etc/ssh/sshd_config
-
-```ascii
-PermitRootLogin yes
-PasswordAuthentication yes
-```
-
 ### Set Timezone
 
-`timedatectl set-timezone UTC`
-
-## SYSTEM
-
-### Restart service
-
-`systemctl restart networking.service`\
-`systemctl restart nginx`\
-`service nginx status`
-
-### Restart SSH server
-
-`/etc/init.d/ssh restart`\
-`systemctl restart sshd`
-
-### Create cron jobs
-`crontab -e -u root`
-
-Examples:
-* Run simple command at scheduled time:\
-`0 18 * * 0-6  <command>`
-
-* Run command and log results to file:\
-`0 18 * * 0-6  <command> >> /path/to/output.log 2>&1`
-> Use >> to append messages to output file, else > to overwrite.
-
-File descriptors:
-* 1: Standard output (stdout).
-* 2: Standard error (stderr).
-
-### Install missing dependencies
-`apt --fix-broken install`\
-`sudo apt-get install -f`
-
-### Install packages
-
 ```shell
-apt-get update && apt-get install -y <package>
+timedatectl set-timezone UTC
 ```
 
-```shell
-sudo dpkg -i <package>
-```
-
-> Update installed packages before installing new ones.
-
-### OS Upgrade
-> [Upgrades from previous releases](https://www.debian.org/releases/lenny/amd64/release-notes/ch-upgrading.en.html)
-
-#### OS Config
-
-* /etc/ssh/sshd_config
-```ascii
-PermitRootLogin yes
-```
-* Update path
-```shell
-export PATH="$PATH:/usr/sbin"
-```
-
-### List running processes on specific port
-
-```shell
-netstat -ano | findstr :3001
-```
-
-- Kill running process:
-
-```shell
-tskill PID
-```
-
-## FILE SYSTEM
+## Filesystem
 
 ### List OS disks
 
+Lists only usable disks:
+
 `df`
 
-> Lists only usable disks.
+Lists all attached disks: 
 
 `fdisk -l`
-
-> Lists all attached disks.
 
 ### Delete all hidden files (starts with `.`)
 
@@ -136,24 +157,34 @@ fsck -f /dev/disk
 
 ### Check & fix corrupted partition
 
-1. Boot in recovery mode
-> `Linux OS (recovery mode)`
+1. Boot in recovery mode -> `Linux OS (recovery mode)`
 
 2. Login with root account
 
-3. Unmount partition to be checked\
-`umount /dev/partition`
+3. Unmount partition to be checked:
 
-4. Run command\
-`sudo fsck -f /`
+```shell
+umount /dev/partition
+```
 
-5. Reboot\
-`reboot`
+4. Run command:
+
+```shell
+sudo fsck -f /
+```
+
+5. Reboot:
+
+```shell
+reboot
+```
 
 ### Check folder permissions
 
-`ls -la path`\
-`ls -ld path`
+```shell
+ls -la path
+ls -ld path
+```
 
 ### Conditional `mkdir`
 
@@ -178,7 +209,7 @@ Available attributes:
 mount -t cifs //<host>/<shared-dir> /mnt/<mount-dir> -o username=<username>,password=<password>,doamin=<domain>,rw,file_mode=0777,dir_mode=0777
 ```
 
-### Create Symbolic Link
+### Create symbolic link
 
 ```shell
 sudo ln -s /path/to/link/file.txt /path/to/target/file.txt

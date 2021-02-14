@@ -1,0 +1,35 @@
+# Build
+#
+**/node_modules
+**/build
+!**/scripts/**
+**/dist
+
+# Yarn
+#
+.yarn/**
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+**/.pnp.*
+**/.pnp
+
+# Logs
+#
+**/logs/**
+**/*.log
+
+# Files
+#
+**/.DS_Store
+**/*.zip
+**/*.bak
+**/*.tgz
+**/*.gz
+!**/.gitkeep
+!**/README.md
+
+# Development
+#
+**/*.code-workspace

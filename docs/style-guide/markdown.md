@@ -2,11 +2,14 @@
 
 [GitHub-flavored Markdown syntax](https://github.github.com/gfm/).
 
+## Tools
+
+- Visual Studio Code: Ctrl+Shift+V in `.md` files open window
+- [Notepad++ NppMarkdownPanel](https://github.com/mohzy83/NppMarkdownPanel)
+
 ## Markdown Syntax
 
-To serve as an example page when styling markdown based Docusaurus sites.
-
-## Headers
+### Headers
 
 # H1 - Create the best documentation
 
@@ -20,9 +23,7 @@ To serve as an example page when styling markdown based Docusaurus sites.
 
 ###### H6 - Create the best documentation
 
----
-
-## Emphasis
+### Emphasis
 
 Emphasis, aka italics, with *asterisks* or _underscores_.
 
@@ -32,9 +33,7 @@ Combined emphasis with **asterisks and _underscores_**.
 
 Strikethrough uses two tildes. ~~Scratch this.~~
 
----
-
-## Lists
+### Lists
 
 1. First ordered list item
 1. Another item
@@ -49,13 +48,11 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 + Or pluses
 
----
+### Links
 
-## Links
+[I'm an inline-style link](https://www.google.com)
 
-[I'm an inline-style link](https://www.google.com/)
-
-[I'm an inline-style link with title](https://www.google.com/ "Google's Homepage")
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
 
 [I'm a reference-style link][arbitrary case-insensitive reference text]
 
@@ -63,17 +60,15 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 Or leave it empty and use the [link text itself].
 
-URLs and URLs in angle brackets will automatically get turned into links. http://www.example.com/ or <http://www.example.com/> and sometimes example.com (but not on GitHub, for example).
+URLs and URLs in angle brackets will automatically get turned into links. http://www.example.com or <http://www.example.com> and sometimes example.com (but not on GitHub, for example).
 
 Some text to show that the reference links can follow later.
 
-[arbitrary case-insensitive reference text]: https://www.mozilla.org/
-[1]: http://slashdot.org/
-[link text itself]: http://www.reddit.com/
+[arbitrary case-insensitive reference text]: https://www.mozilla.org
+[1]: http://slashdot.org
+[link text itself]: http://www.reddit.com
 
----
-
-## Images
+### Images
 
 Here's our logo (hover to see the title text):
 
@@ -89,9 +84,7 @@ Images from any folder can be used by providing path to file. Path should be rel
 ![img](../static/images/logo.svg)
 ```
 
----
-
-## Code
+### Code
 
 ```javascript
 var s = 'JavaScript syntax highlighting';
@@ -108,15 +101,7 @@ No language indicated, so no syntax highlighting.
 But let's throw in a <b>tag</b>.
 ```
 
-```js {2}
-function highlightMe() {
-  console.log('This line can be highlighted!');
-}
-```
-
----
-
-## Tables
+### Tables
 
 Colons can be used to align columns.
 
@@ -133,9 +118,8 @@ There must be at least 3 dashes separating each header cell. The outer pipes (|)
 | _Still_  | `renders` | **nicely** |
 | 1        | 2         | 3          |
 
----
 
-## Blockquotes
+### Blockquotes
 
 > Blockquotes are very handy in email to emulate reply text. This line is part of the same quote.
 
@@ -145,9 +129,7 @@ Quote break.
 boy let's keep writing to make sure this is long enough to actually wrap for
 everyone. Oh, you can _put_ **Markdown** into a blockquote.
 
----
-
-## Inline HTML
+### Inline HTML
 
 <dl>
   <dt>Definition list</dt>
@@ -157,11 +139,11 @@ everyone. Oh, you can _put_ **Markdown** into a blockquote.
   <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
 </dl>
 
----
-
-## Line Breaks
+### Line Breaks
 
 Here's a line for us to start with.
+
+---
 
 This line is separated from the one above by two newlines, so it will be a
 _separate paragraph_.
@@ -169,12 +151,22 @@ _separate paragraph_.
 This line is also a separate paragraph, but... This line is only separated by a
 single newline, so it's a separate line in the _same paragraph_.
 
----
+## Static Site Generator (SSG)
 
-## Embed `.md?x` documents in other documents
+> See [Getting Started](https://mdxjs.com/getting-started#getting-started) for
+more details on working with SSGs and compilers.
 
-> Docusaurus supports [transclusion](https://mdxjs.com/getting-started#documents)
-out of the box. Import is limited to documents located inside `docs` directory.
+### Code line highlighting
+
+```js {2}
+function highlightMe() {
+  console.log('This line can be highlighted!');
+}
+```
+
+### Embed `.md?x` documents in other documents
+
+> See the documentation for more details on [transclusion](https://mdxjs.com/getting-started#documents).
 
 ```jsx
 import License from './license.md'
