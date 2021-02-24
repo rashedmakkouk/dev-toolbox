@@ -1,35 +1,33 @@
 # Build
 #
-**/node_modules
-**/build
-!**/scripts/**
-**/dist
+node_modules
+build
 
-# Yarn
+# Docusaurus
 #
-.yarn/**
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
-**/.pnp.*
-**/.pnp
+.docusaurus
+.cache-loader
 
 # Logs
 #
-**/logs/**
-**/*.log
+*.log
 
 # Files
 #
-**/.DS_Store
-**/*.zip
-**/*.bak
-**/*.tgz
-**/*.gz
+.DS_Store
+.idea
+*.iml
+*.code-workspace
+.changelog
+*.zip
+*.bak
+*.tgz
+*.gz
 !**/.gitkeep
 !**/README.md
 
 # Development
 #
-**/*.code-workspace
+*.env
+*.env.*
+*.code-workspace

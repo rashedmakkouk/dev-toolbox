@@ -1,1 +1,0 @@
-ENTRYPOINT ["docker-entrypoint.sh"]
