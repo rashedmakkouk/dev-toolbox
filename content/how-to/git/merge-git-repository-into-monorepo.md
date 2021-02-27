@@ -6,12 +6,15 @@ sidebar_label: Merge Git Repository into Monorepo
 ## From a repository
 
 1. Clone repository to a new directory
-`git clone <repo-url> [package-name]`
+
+```shell
+git clone <repo-url> <package>
+```
 
 2. Filter list of commits
 
 ```shell
-export TARGET_DIR="packages/[package-name]"
+export TARGET_DIR="packages/<package>"
 
 git filter-branch --prune-empty --tree-filter '
   mkdir -p "$TARGET_DIR"
@@ -23,16 +26,16 @@ git filter-branch --prune-empty --tree-filter '
 
 ## From a monorepo
 
-1. Add remote in monorepo to [package-name]
+1. Add remote in monorepo to package
 
 ```shell
-git remote add [package-name] /path/to/[package-name]
+git remote add <package> /path/to/<package>
 ```
 
-2. Fetch commits from [package-name]
+2. Fetch commits from package
 
 ```shell
-git fetch [package-name] --no-tags
+git fetch <package> --no-tags
 ```
 
 > --no-tags - do not fetch tags to avoid polluting monorepo tags
@@ -40,7 +43,7 @@ git fetch [package-name] --no-tags
 3. Merge
 
 ```shell
-git merge [package-name]/master --allow-unrelated-histories
+git merge <package>/master --allow-unrelated-histories
 ```
 
 > --allow-unrelated-histories - override Git restriction to merge branch that\
@@ -49,5 +52,5 @@ git merge [package-name]/master --allow-unrelated-histories
 4. Remove remote
 
 ```shell
-git remote remove [package-name]
+git remote remove <package>
 ```
