@@ -3,7 +3,17 @@ title: Git
 sidebar_label: Git
 ---
 
-## CONFIG
+## Changelog
+
+### Output commits metadata
+
+```shell
+git log --oneline --decorate
+
+git log --pretty="- %s" > CHANGELOG.md
+```
+
+## Config
 
 ### Show current configuration
 
@@ -43,7 +53,7 @@ git push --set-upstream origin master
 git push -u origin master
 ```
 
-## REPOSITORIES
+## Repository
 
 ### Create a new repository
 
@@ -149,17 +159,79 @@ git status
 
 ### Undo activities
 
-List all executed commands  
+List all executed commands:
+
 ```shell
 git reflog
 ```
 
-Undo changes to specified activity  
+Undo changes to specified activity:
+
 ```shell
 git reset HEAD@{#}
 ```
 
-## Commits
+## Commit
+
+### Structure
+
+> See [conventional-commits](https://www.conventionalcommits.org) specification.
+
+```ascii
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+Multiple scopes are supported (delimiter options: "/", "\\", ",").
+
+#### Types
+
+- `BREAKING CHANGE`:
+- `build`: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+- `chore`: Changes to the build process or auxiliary tools and libraries
+- `ci`: Changes to our CI configuration files and scripts (example scopes: Circle, BrowserStack, SauceLabs)
+- `deprecate`:
+- `docs`: Documentation only changes
+- `feat`: A new feature
+- `fix`: A bug fix
+- `perf`: A code change that improves performance
+- `refactor`: A code change that neither fixes a bug nor adds a feature
+- `revert`:
+- `style`: Changes that do not affect the meaning of the code (e.g. white space, formatting)
+- `test`: Adding missing tests or correcting existing tests
+
+Breaking change commit options:
+
+- Suffix an existing type with `!` to indicate a breaking change
+
+```ascii
+refactor!: Breaking change message
+```
+
+- Suffix an existing type with `!` and use a footer token to describe the change
+
+```ascii
+fix!: New feature message
+
+BREAKING CHANGE: Breaking change message
+```
+
+- Use type BREAKING CHANGE followed by colon, space and the message
+
+```ascii
+BREAKING CHANGE: Breaking change message
+```
+
+#### Scopes
+
+Covers named packages, exceptions include:
+
+- `changelog`
+- `migrations`
+- `*-infra`
 
 ### Revert file changes to a specific commit in history
 
@@ -201,7 +273,7 @@ git log --stat
 git diff <commit#1>:<file-path> <commit#2>:<file-path>
 ```
 
-### Messages
+### Message
 
 > Use open double quotes or    to write multiline message.  
 > Use -m for the header & second -m for the details (separate paragraphs)
@@ -216,7 +288,8 @@ git branch -b <branch_name> <tag_name>
 
 ### Merge (while in master)
 
-Merge all branch commits into one:  
+Merge all branch commits into one:
+
 ```shell
 git merge --squash <branch_name>
 ```
@@ -229,18 +302,22 @@ git branch -a
 
 ### Delete branch
 
-Delete branch from working directory:  
+Delete branch from working directory:
+
 ```shell
 git branch -d <branch_name>
 ```
 
-Delete branch from remote repository:  
+Delete branch from remote repository:
+
 ```shell
 git push origin --delete <branch_name>
 ```
 
 ## Tags
-> Semantic versioning guideline: `v<major>.<minor>.<patch>`
+
+> Semantic versioning guideline: `v<major>.<minor>.<patch>`; see
+> [semver](https://semver.org) form more details.
 
 ### Create tag from branch
 
@@ -268,12 +345,14 @@ git push --tags
 
 ### Delete tag
 
-From working directory:  
+From working directory:
+
 ```shell
 git tag -d <tag_name>
 ```
 
-From remote repository:  
+From remote repository:
+
 ```shell
 git push origin -d <tag_name>
 ```
@@ -300,15 +379,16 @@ git stash show <stash>
 
 > Include `-p` (for patch) option to view changes in diff-style patch layout.
 
-
 ### Retrieve stashed changes
 
-* Apply changes and leave a copy in the stash  
+Apply changes and leave a copy in the stash:
+
 ```shell
 git stash apply <stash>
 ```
 
-* Apply changes and remove files from the stash  
+Apply changes and remove files from the stash:
+
 ```shell
 git stash pop <stach>
 ```
@@ -332,12 +412,14 @@ git ls-files -i -z --exclude-from=.gitignore
 
 ### Remove updated files in `.gitignore`
 
-- Method #1  
+Method #1:
+
 ```shell
 git ls-files -i --exclude-from=.gitignore | xargs -0 git rm -r -n --cached
 ```
 
-- Method #2
+Method #2:
+
 ```shell
 git rm -r -n --cached `git ls-files -i --exclude-from=.gitignore`
 ```
@@ -346,18 +428,17 @@ git rm -r -n --cached `git ls-files -i --exclude-from=.gitignore`
 > -r: recursive  
 > -n: dry run; list affected files
 
-
 Commit changes and push to origin to remove/update from remote repository.
 
 ### List modified files
 
-- By duration
+By duration:
 
 ```shell
 git diff $(git log -1 --before=@{last.day} --format=%H) --stat | uniq
 ```
 
-- Since specified time
+Since specified time:
 
 ```shell
 git diff $(git log -1 --before=@{4.hours.ago} --format=%H) --stat | uniq
@@ -381,6 +462,7 @@ git rm -r --cached <directory>
 ```shell
 git reset HEAD .
 ```
+
 > If not committed.
 
 ```shell
