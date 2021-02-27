@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
-const devops = require('./sections/devops');
-const general = require('./sections/general');
-const git = require('./sections/git');
-const gitlab = require('./sections/gitlab');
-const kubernetes = require('./sections/kubernetes');
-const linux = require('./sections/linux');
-const windows = require('./sections/windows');
+const devops = require('./devops');
+const general = require('./general');
+const git = require('./git');
+const gitlab = require('./gitlab');
+const kubernetes = require('./kubernetes');
+const linux = require('./linux');
+const windows = require('./windows');
 
 module.exports = [
   'how-to/index',
