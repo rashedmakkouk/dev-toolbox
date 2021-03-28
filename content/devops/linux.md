@@ -52,14 +52,6 @@ netstat -ano | findstr :3001
 tskill PID
 ```
 
-## Filesystem
-
-### Add user permission to directory
-
-```shell
-sudo chown -R <username> path/to/directory
-```
-
 ## Commands
 
 ### Determine running OS release
@@ -83,8 +75,12 @@ uname -mrs
 
 ```shell
 curl -SL 'url' \
-    | tar -xvzf - --strip-components=1 -C /path/to/output/dir
+     | tar -xvzf - --strip-components=1 -C /path/to/output/dir
 ```
+
+> Use `-k` flag to ignore SSL validation. \
+> `-C` stands for directory. \
+> `--string-components=#` subdirectory level to extract files from.
 
 ### Create cron jobs
 
@@ -202,13 +198,25 @@ timedatectl set-timezone UTC
 
 ## Filesystem
 
+### Add user permission to directory
+
+```shell
+sudo chown -R <username> path/to/directory
+```
+
+### Add file execution permission
+
+```shell
+chmod +x /path/to/file
+```
+
 ### List OS disks
 
 Lists only usable disks:
 
 `df`
 
-Lists all attached disks: 
+Lists all attached disks:
 
 `fdisk -l`
 
@@ -262,9 +270,11 @@ if not exist path/to/dir mkdir path\\to\\dir
 ```
 
 ### Preserve file attributes on copy
+
 `cp -r --preserve=mode,ownership,timestamps <source> <destination>`
 
 Available attributes:
+
 - mode
 - ownership
 - timestamps
@@ -290,12 +300,51 @@ sudo ln -s /path/to/link/directory /path/to/target/directory
 sudo unlink|rm /path/to/target/(file.txt|directory)
 ```
 
-## USER
+## User
 
-| Task                    | Command                               |
-|---                      |---                                    |
-| Change password         |   `passwd`                            |
-| Switch user             | `su - username`                       |
-| List users in group     | `getent group groupname`              |
-| Add user to group       | `/usr/sbin/adduser username group`    |
-| Logout user             | `logout`                              |
+### Change password
+
+```shell
+passwd
+```
+
+### Switch user
+
+```shell
+su - username
+```
+
+### List users in group
+
+```shell
+getent group groupname
+```
+
+### Add user to group
+
+```shell
+/usr/sbin/adduser username group
+```
+
+## Packages
+
+### supervisor
+
+```shell
+supervisorctl update
+supervisorctl reread
+```
+
+Manage programs:
+
+```shell
+supervisorctl
+
+start <program>
+stop <program>
+restart <program>
+tail <program>
+
+status
+quit
+```

@@ -3,9 +3,10 @@ const items = [
   'resources/useful-links/design',
   'resources/useful-links/development',
   'resources/useful-links/devops',
+  'resources/useful-links/events',
   'resources/useful-links/learning',
   'resources/useful-links/product-management',
-  'resources/useful-links/reference-material',
+  'resources/useful-links/tools-services-material',
 ];
 
 module.exports = {

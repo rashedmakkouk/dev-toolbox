@@ -99,6 +99,15 @@ docker exec CONTAINER /usr/bin/mysqldump -u root --password=root DATABASE > back
 docker exec -i CONTAINER /usr/bin/mysql -u root --password=root DATABASE < backup.sql
 ```
 
+### Enable `ONLY_FULL_GROUP_BY`
+
+```sql
+\sql
+\connect root@localhost
+
+SET sql_mode=(SELECT CONCAT(@@sql_mode,',ONLY_FULL_GROUP_BY',''));
+```
+
 ## docker-compose.yml
 
 ### extends
@@ -119,10 +128,33 @@ Any defined networks is an extended service must also live where it was extended
 
 ```yaml
 dev.database-env:
-	KEY: value
+ KEY: value
 
 services:
-	service-name:
-		environment:
-			<<: *database-env
+ service-name:
+  environment:
+   <<: *database-env
+```
+
+## Daemon WSL 2
+
+> [WSL Features](https://docs.microsoft.com/en-us/windows/wsl/release-notes#build-18945)
+
+### Limit resources used by Docker daemon using WSL 2
+
+Create `.wslconfig` config file:
+
+> %USERPROFILE%/.wslconfig
+
+```conf
+[wsl2]
+memory=1GB
+swap=1GB
+processors=1
+```
+
+Restart WSL service:
+
+```powershell
+Restart-Service LxssManager
 ```

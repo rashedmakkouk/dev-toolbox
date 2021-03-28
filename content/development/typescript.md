@@ -3,22 +3,32 @@ title: TypeScript
 sidebar_label: TypeScript
 ---
 
-## Interface
+## Type Definitions
 
-### Pick<Type, Keys>
+### Overwrite exiting vendor type definitions
 
-Constructs a new type by picking all `Keys` properties from interface.
+> vendor/custom.d.ts
 
-### Omit<Type, Keys>
+```typescript
+declare global {
+  namespace NodeJS {
+    interface Global {
+        myConfig: {
+          a: number;
+          b: number;
+        }
+    }
+  }
+}
+```
 
-Constructs a new type by removing all `Keys` properties from interface.
+> tsconfig.json
 
-## Type
-
-### Extract<Type, Union>
-
-Constructs a new type by extracting all union members assigned to `Union`.
-
-### Exclude<Type, ExcludedUnion>
-
-Constructs a new type by excluding all union members assigned to `ExcludeUnion`.
+```json
+{
+  "types": [
+    ...
+    "vendor/custom.d.ts"
+  ]
+}
+```

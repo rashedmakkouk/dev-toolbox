@@ -14,6 +14,10 @@ sidebar_label: DevOps
 - [github / linguist](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)
 - [Custom .gitignore](https://github.com/github/gitignore)
 
+## Kubernetes
+
+- [Kubernetes for Full-Stack Developers](https://www.digitalocean.com/community/curriculums/kubernetes-for-full-stack-developers)
+
 ## Markdown
 
 - [adam-p / Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)
