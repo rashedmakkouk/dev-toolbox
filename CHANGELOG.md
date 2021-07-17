@@ -4,6 +4,8 @@
 
 ### Features
 
+- feat: Bump package version from `0.13.0` to `0.14.0`
+- chore: Upgrade package dependencies --latest
 - feat: Add `Assets` section in `Useful Links`
 - feat: Update `Git` content in `DevOps`
 - feat: Update `Linux` content in `DevOps`
