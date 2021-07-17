@@ -11,6 +11,8 @@ sidebar_label: Git
 git log --oneline --decorate
 
 git log --pretty="- %s" > CHANGELOG.md
+
+git log --stat
 ```
 
 ## Config

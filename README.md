@@ -22,6 +22,7 @@
 - DevOps
 - General
 - Git
+- GitLab
 - Kubernetes
 - Linux
 - Windows

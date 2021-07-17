@@ -7,6 +7,7 @@ const items = [
   'resources/useful-links/learning',
   'resources/useful-links/product-management',
   'resources/useful-links/tools-services-material',
+  'resources/useful-links/assets',
 ];
 
 module.exports = {

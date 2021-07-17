@@ -58,6 +58,9 @@ tskill PID
 
 ```shell
 cat /etc/*release
+lsb_release -a
+cat /etc/debian_version
+uname -mrs
 ```
 
 ```shell
@@ -65,10 +68,6 @@ source /etc/os-release
 
 echo $ID
 echo $NAME
-```
-
-```shell
-uname -mrs
 ```
 
 ### Download and extract file
@@ -154,6 +153,10 @@ apt-mark showhold
 
 > [Upgrades from previous releases](https://www.debian.org/releases/lenny/amd64/release-notes/ch-upgrading.en.html)
 
+```shell
+apt-get update && apt-get dist-upgrade
+```
+
 ### Enable SSH root login
 
 > /etc/ssh/sshd_config
@@ -232,25 +235,25 @@ rm -rf /.[!.]*
 fsck -f /dev/disk
 ```
 
-### Check & fix corrupted partition
+### Check and fix corrupted partition
 
 1. Boot in recovery mode -> `Linux OS (recovery mode)`
 
-2. Login with root account
+1. Login with root account
 
-3. Unmount partition to be checked:
+1. Unmount partition to be checked:
 
 ```shell
 umount /dev/partition
 ```
 
-4. Run command:
+1. Run command:
 
 ```shell
 sudo fsck -f /
 ```
 
-5. Reboot:
+1. Reboot:
 
 ```shell
 reboot

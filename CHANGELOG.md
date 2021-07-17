@@ -1,5 +1,32 @@
 # CHANGELOG
 
+## 0.11.0 (2021-07-17)
+
+### Features
+
+- feat: Add `Assets` section in `Useful Links`
+- feat: Update `Git` content in `DevOps`
+- feat: Update `Linux` content in `DevOps`
+- feat: Update `Useful Links` in `Resources`
+
+## 0.11.0 (2021-04-29)
+
+- feat: Update `Development` content in `Useful Links`
+
+## 0.11.0 (2021-03-30)
+
+### Features
+
+- feat: Update `Design` content in `Useful Links`
+- feat: Update `Product Management` content in `Useful Links`
+
+## 0.11.0 (2021-03-07)
+
+### Features
+
+- feat: Update `Git` content in `DevOps`
+- feat: Update `Linux` content in `DevOps`
+
 ## 0.11.0 (2021-02-25)
 
 ### Changes
