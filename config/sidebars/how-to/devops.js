@@ -1,7 +1,7 @@
 const items = [
-  'how-to/devops/create-rsa-keys',
-  'how-to/devops/setup-https-in-local-dev-env',
+  'how-to/devops/generate-ssh-keys',
   'how-to/devops/setup-nginx-server',
+  'how-to/devops/setup-https-in-local-dev-env',
 ];
 
 module.exports = {

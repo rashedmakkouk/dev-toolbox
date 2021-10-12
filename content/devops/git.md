@@ -280,37 +280,84 @@ git diff <commit#1>:<file-path> <commit#2>:<file-path>
 > Use open double quotes or    to write multiline message.  
 > Use -m for the header & second -m for the details (separate paragraphs)
 
-## Branching
+## Branches
 
-### Create branch from tag
+### Create branch from tag/commit/branch
 
 ```shell
-git branch -b <branch_name> <tag_name>
+git branch -b <branch_name> <[tag|commit|branch]_name>
 ```
 
-### Merge (while in master)
+### Switch to branch
 
-Merge all branch commits into one:
+> You could switch to different branch to create new branch off of.
+
+```shell
+git switch <branch_name>
+```
+
+### Rename branch
+
+> If branch is already published, delete remote branch, create and push a new branch.
+
+```shell
+git branch -m <new_name>
+```
+
+### Merge branch
+
+> Creates a new commit.
+
+Merge all branch commits into active branch:
 
 ```shell
 git merge --squash <branch_name>
 ```
 
-### Branch info
+### Rebase branch
+
+> Merges commits to active branch.
+
+Switch to branch to bring changes into.
+
+```shell
+git rebase <branch_name>
+```
+
+### Compare branches
+
+```shell
+git log origin/main..<branch_name>
+```
+
+### Get branch info
 
 ```shell
 git branch -a
+git branch -v
+```
+
+### Publish branch
+
+```shell
+git push -u origin <branch_name>
+```
+
+### Track branch
+
+```shell
+git checkout --track origin/<branch_name>
 ```
 
 ### Delete branch
 
-Delete branch from working directory:
+- Delete branch from working directory:
 
 ```shell
 git branch -d <branch_name>
 ```
 
-Delete branch from remote repository:
+- Delete branch from remote repository:
 
 ```shell
 git push origin --delete <branch_name>

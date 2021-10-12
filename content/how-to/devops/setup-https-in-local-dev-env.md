@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 ## Install `OpenSSL`
 
-a. Download and install [OpenSSL](https://www.openssl.org)
+Download and install [OpenSSL binaries](https://wiki.openssl.org/index.php/Binaries)
 
 ## Create root SSL certificate
 

@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.11.0 (2021-10-12)
+
+### Features
+
+- feat: Update `Generate SSH Keys` content
+
 ## 0.11.0 (2021-07-17)
 
 ### Features
