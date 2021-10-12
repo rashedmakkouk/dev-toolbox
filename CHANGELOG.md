@@ -4,6 +4,7 @@
 
 ### Features
 
+- feat: Bump package version from `0.14.0` to `0.15.0`
 - feat: Update `Generate SSH Keys` content
 
 ## 0.11.0 (2021-07-17)
