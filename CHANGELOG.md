@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## 0.16.0 (2021-12-15)
+
+### Features
+
+- feat: Bump package version from `0.16.0` to `0.17.0`
+  - Update package changelog
+  - Update package dependencies --latest
+- feat: Update `Setup Nginx Server` documentation
+  - Remove Docker implementation documentation
+  - Update configuration files
+  - Add usage instructions and code comments
+  - Apply text and code styling
+- feat: Update documentation content
+  - Add new `Useful Links` in `DevOps\Deploy`
+  - Add code comments
+  - Apply text styling
+  - Apply folder structure enhancements
+
 ## 0.15.0 (2021-10-17)
 
 ### Features
