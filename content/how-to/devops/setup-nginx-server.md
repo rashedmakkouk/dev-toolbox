@@ -3,114 +3,85 @@ title: Setup Nginx Server
 sidebar_label: Setup Nginx Server
 ---
 
-This [package](../../templates/index.md) serves both as a container to run a
-proxy server, load balancer and reverse proxy based on `Nginx` or as a
-configuration reference to build bare metal proxy server instances.
+Setup a proxy server, a load balancer and a reverse proxy based on [Nginx][Nginx].
 
-## Config
+## Installation
 
-> src/conf
+Get a copy of the latest stable release from the [official download page][Nginx].
 
-The complete required configuration is located at `src/conf`.
+> Default directory - Linux: `/etc/nginx`.\
+> Default directory - Windows: `X:/nginx`.
 
-- bases: A list of base configuration files that can be included where needed.
-- sites-available: A list of all configured servers; those will be inactive.
-- sites-enabled: A list of all servers to be activated.
-- upstreams: A list of all available upstreams for use in proxy_pass redirects.
+You can find a sample get started template [here](../../templates/index.md#nginx-server) along with
+predefined minimum configuration.
 
-### Installation
+## Configuration
 
-> Default directory: `/etc/nginx`.
+### nginx.conf
 
-### User
+> conf/nginx.conf
 
-A new user `www` with the same name for a group is required and is used by the
-server `worker` processes.
+Nginx root configuration file.
+
+`user`
+
+Provide a user, e.g. `www`, without sudo priviliges and a group with the same name to be used by
+the server `worker` processes.
+
+### Bases
+
+> conf/bases
+
+Includes Nginx root and server block configuration following best practices from Nginx and the
+community.
+
+A base file is a way to centralize common and reusable configurations.
+
+### Upstreams
+
+> conf/upstreams
+
+Defined list of `host`s available to proxy requests and for load balancing; upstreams are loaded in
+server blocks by configuring `proxy_pass` key within a `location`.
+
+### Sites
+
+List of server blocks used to listen to and proxy incoming requests. Sites are loaded in Nginx
+root [config](#nginx.conf) file.
+
+> conf/sites-available: Inactive
+
+`domain.com.conf`
+
+A server block template suitable for use in production environments.
+
+`http-to-https.conf`
+
+A server block to redirect non-https connections to https.
+
+`non-to-www.conf`
+
+A server block to redirect root domain connections to www.
+
+> conf/sites-enabled: Active
+
+`sites-enabled/domain.dev.conf`
+
+A server block template suitable for use in development environments.
 
 ### SSL
 
-Copy generated SSL certificates and keys.
+To serve secure connections over HTTPS, SSL certificates and keys should be generated; update
+server block `ssl_certificate` and `ssl_certificate_key` paths as needed.
 
-> Default directory: `/etc/ssl/private`, `/etc/ssl/certs`
+> Default directory: `/etc/ssl/private`, `/etc/ssl/certs`.
 
 ### Static Files
 
-Copy generated static files to be served.
+To serve static files, update [sites-enabled](#sites) server block `location/root` key to point to
+the stored static files location path.
 
-> Default directory: `/usr/share/nginx/html`.
+> Default directory - Linux: `/usr/share/nginx/html`.\
+> Default directory - Windows: `X:/nginx/html`.
 
-## Bare Metal Instance
-
-### Setup
-
-- Get a copy of the latest stable release from the official
-[download page](http://nginx.org/en/download.html).
-
-- Check [OS](#os) section for the recommended Linux distribution; if running an
-on-premise server, make sure to install the latest system and security updates
-before moving forward.
-
-- Refer to [config](#config) section for details on configuring the proxy and
-server blocks.
-
-## Docker Container Instance
-
-Built container image uses 127.0.0.1 as server host and default instance ports;
-Port mapping to the host machine is based on the values defined in the `.env`
-file.
-
-> Always use the host's IP address in configuration files instead of localhost
-> to allow external access.
-
-The required [config](#config) is automatically loaded and deployed on the server.
-
-Run the following command from the root directory of this package to spin up a
-new container (include --build flag if updating and existing container):
-
-```shell
-docker-compose up
-```
-
-No additional steps are needed.
-
-### OS
-
-`Debian 10 (buster)`
-
-> command: cat /etc/os-release
-
-### Services
-
-This setup deploys the following service(s):
-
-`proxy`
-
-The main http server instance.
-
-### Networks
-
-This container requires a top-level bridge network named `main-network` to
-connect to.
-
-### Ports
-
-| Service   | Protocol  | Container   | Host              |
-|---        |---        |---          |---                |
-| Nginx     | TCP       | $PROXY_PORT | $PROXY_PORT_HOST  |
-
-### Volumes
-
-`logs`
-
-> volumes/logs:/etc/nginx/logs
-
-Hosts proxy and server blocks access and error logs.
-
-### Files
-
-`html`
-
-> build/html
-
-All content stored in __build/html__ will be copied and included in the final
-container image to be served as static files.
+[Nginx]: http://nginx.org/en/download.html
