@@ -8,6 +8,10 @@ sidebar_label: DevOps
 - [A First Timer's Guide to an Open Source Project](https://auth0.com/blog/a-first-timers-guide-to-an-open-source-project)
 - [The Ultimate Guide to Open Source](https://www.freecodecamp.org/news/the-ultimate-guide-to-open-source)
 
+## Deploy
+
+- [Learn How to Deploy 12 Apps to AWS, Azure, & Google Cloud](https://www.freecodecamp.org/news/learn-how-to-deploy-12-apps-to-aws-azure-google-cloud)
+
 ## Docker
 
 - [The Docker Handbook](https://www.freecodecamp.org/news/the-docker-handbook)

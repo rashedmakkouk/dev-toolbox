@@ -11,6 +11,8 @@ Follow instructions at [Generate a new SSH key][generate-new-ssh-key].
 
 ```shell
 $ ssh-keygen -t ed25519 -C "your_email@example.com"
+
+Generating public/private ed25519 key pair.
 ```
 
 Enter desired filename when prompted and avoid manually renaming files for successful authentication.
@@ -26,7 +28,7 @@ official instructions to add your public key to your account.
 ### Configure `ssh-agent`
 
 Additional steps might be required before you can successfully connect; check your online Git
-repository service provider documentations for additional instructions.
+repository service provider documentation for additional instructions.
 
 - [Adding your SSH key to the `ssh-agent`][adding-ssh-key-to-ssh-agent]
 
@@ -41,7 +43,7 @@ for more details.
 
 On Windows, additional steps are needed to automate the process; follow these documented [instructions][auto-launchig-ssh-agent-on-git-for-windows].
 
-> Custom `.bashrc` config file template can be found [here](../../templates/bash/ssh-agent.bashrc).
+> Custom `.bashrc` config file template can be found [here](../../templates/ssh/ssh-agent.bashrc).
 
 [generate-new-ssh-key]: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key
 [add-ssh-key-to-ssh-agent]: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent
