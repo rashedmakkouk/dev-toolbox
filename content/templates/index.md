@@ -3,10 +3,14 @@ title: Templates
 sidebar_label: Templates
 ---
 
-## bash
-
-## nginx-server
+## Nginx Server
 
 > templates/nginx-server
 
-## wsl-2-port-forwarding.ps1
+## SSH Agent
+
+> templates/ssh/ssh-agent.bashrc
+
+## WSL 2 Port Forwarding
+
+> templates/wsl-2-port-forwarding.ps1

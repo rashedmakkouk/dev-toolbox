@@ -37,6 +37,14 @@
 - Markdown
 - Version Control
 
+## [Templates](./content/templates/index.md)
+
+Includes sample configuration files, scripts and installations.
+
+- Nginx server
+- SSH Agent
+- WSL 2 Port Forwarding
+
 ## Usage
 
 This package implements a static site generator that serves the documentation

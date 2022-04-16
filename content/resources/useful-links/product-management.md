@@ -12,7 +12,7 @@ sidebar_label: Product Management
 
 ## Guides
 
-[GitLab's Guide to All-Remote](https://about.gitlab.com/company/culture/all-remote/guide)
+- [GitLab's Guide to All-Remote](https://about.gitlab.com/company/culture/all-remote/guide)
 
 ## Ceremonies
 

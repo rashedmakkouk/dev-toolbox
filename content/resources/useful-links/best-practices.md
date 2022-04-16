@@ -14,7 +14,7 @@ sidebar_label: Best Practices
 
 ## Project Management
 
-- [Keep a change log](https://keepachangelog.com)
+- [Keep a changelog](https://keepachangelog.com)
 
 ## Git
 

@@ -27,10 +27,6 @@ sidebar_label: DevOps
 
 - [Kubernetes for Full-Stack Developers](https://www.digitalocean.com/community/curriculums/kubernetes-for-full-stack-developers)
 
-## Markdown
-
-- [adam-p / Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)
-
 ## Monorepo
 
 - [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces)
