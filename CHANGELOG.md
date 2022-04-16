@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 0.16.0 (2021-04-16)
+
+### Features
+
+- feat: Bump package version from `0.17.0` to `0.18.0`
+  - Update package changelog
+  - Update package dependencies --latest
+- feat: Update documentation content
+  - Add new `Useful Links` in `Best Practices`
+  - Add new `Useful Links` in `DevOps`
+  - Add new `Useful Links` in `Product Management`
+  - Update `Templates` index.md file
+  - Update `README.md` file
+
 ## 0.16.0 (2021-12-15)
 
 ### Features
