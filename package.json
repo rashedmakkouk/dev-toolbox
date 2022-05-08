@@ -1,6 +1,6 @@
 {
   "name": "@rashedmakkouk/dev-toolbox",
-  "version": "0.18.0",
+  "version": "0.19.0",
   "description": "Developer and DevOps resources and guides.",
   "displayName": "@rashedmakkouk/dev-toolbox",
   "author": {
@@ -11,7 +11,7 @@
   "license": "MIT",
   "private": false,
   "engines": {
-    "yarn": ">= 1.4.0"
+    "yarn": ">= 1.22.18"
   },
   "repository": {
     "type": "git",
@@ -20,18 +20,22 @@
   "bugs": {
     "url": "https://github.com/rashedmakkouk/dev-toolbox/issues"
   },
+  "homepage": "https://github.com/rashedmakkouk/dev-toolbox#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start --port 8000",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
-    "serve": "docusaurus serve",
+    "serve": "docusaurus serve --port 8000",
     "clear": "docusaurus clear"
   },
   "dependencies": {
-    "@docusaurus/core": "2.0.0-beta.18",
-    "@docusaurus/preset-classic": "2.0.0-beta.18",
+    "@docusaurus/core": "2.0.0-beta.20",
+    "@docusaurus/preset-classic": "2.0.0-beta.20",
     "@mdx-js/react": "^2.1.1",
     "clsx": "^1.1.1",
     "react": "^18.0.0",
@@ -40,9 +44,10 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^2.0.0-beta.18",
     "@tsconfig/docusaurus": "^1.0.5",
+    "@types/mdx": "^2.0.1",
     "@types/react": "^18.0.5",
     "@types/react-helmet": "^6.1.5",
     "@types/react-router-dom": "^5.3.3",
-    "typescript": "^4.6.3"
+    "typescript": "4.6.4"
   }
 }

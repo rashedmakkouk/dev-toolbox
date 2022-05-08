@@ -45,5 +45,6 @@ module.exports = {
     prism,
   },
   title: 'dev-toolbox',
+  trailingSlash: false,
   url: 'https://domain-name.com',
 };

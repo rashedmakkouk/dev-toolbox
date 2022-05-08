@@ -1,12 +1,33 @@
 # CHANGELOG
 
-## 0.16.0 (2021-04-16)
+## 0.18.0 (2021-05-08)
+
+### Features
+
+- feat: Update package configuration
+  - Bump package version from `0.18.0` to `0.19.0`
+  - Update package changelog
+  - Upggrade package dependencies --latest
+  - Update Docusaurus configuratin files
+  - Add `.markdownlint.json` config file
+- feat: Update documentation content
+  - Update Sidebar routes configuration
+  - Add `How-to\Git\Split subfolder out to a new repository`
+  - Add `Red Hat build of OpenJDK` in `Useful Links`
+  - Rename `Learning` to `Learn` in `Useful Links`
+  - Rename `Tools, Service & Material` to `Tools & Services` in `Useful Links`
+  - Add `Git` section in `Useful Links`
+  - Move `Typescript` section to `Useful Links\Development`
+  - Update `Useful Links` topics links
+  - Fix content title typos
+
+## 0.17.0 (2021-04-16)
 
 ### Features
 
 - feat: Bump package version from `0.17.0` to `0.18.0`
   - Update package changelog
-  - Update package dependencies --latest
+  - Upgrade package dependencies --latest
 - feat: Update documentation content
   - Add new `Useful Links` in `Best Practices`
   - Add new `Useful Links` in `DevOps`
@@ -20,7 +41,7 @@
 
 - feat: Bump package version from `0.16.0` to `0.17.0`
   - Update package changelog
-  - Update package dependencies --latest
+  - Upgrade package dependencies --latest
 - feat: Update `Setup Nginx Server` documentation
   - Remove Docker implementation documentation
   - Update configuration files
@@ -38,7 +59,7 @@
 
 - feat: Bump package version from `0.15.0` to `0.16.0`
   - Update package changelog
-  - Update package dependencies --latest
+  - Upgrade package dependencies --latest
 - feat: Update `How-to\DevOps` content
   - Update `Connect with SSH` content
   - Update `Generate SSL Certificate` content
@@ -55,7 +76,7 @@
 ### Features
 
 - feat: Bump package version from `0.13.0` to `0.14.0`
-- chore: Upgrade package dependencies --latest
+- chore: Upggrade package dependencies --latest
 - feat: Add `Assets` section in `Useful Links`
 - feat: Update `Git` content in `DevOps`
 - feat: Update `Linux` content in `DevOps`
