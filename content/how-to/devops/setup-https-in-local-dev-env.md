@@ -3,9 +3,6 @@ title: Setup Https in Local Dev Env
 sidebar_label: Setup Https in Local Dev Env
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 > Ref.: [How to get HTTPS working on your local development environment in 5 minutes](https://www.freecodecamp.org/news/how-to-get-https-working-on-your-local-development-environment-in-5-minutes-7af615770eec)
 
 ## Install `OpenSSL`

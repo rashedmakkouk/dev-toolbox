@@ -277,20 +277,28 @@ git diff <commit#1>:<file-path> <commit#2>:<file-path>
 
 ### Message
 
-> Use open double quotes or    to write multiline message.  
+> Use open double quotes to write multiline message.  
 > Use -m for the header & second -m for the details (separate paragraphs)
 
 ## Branches
 
-### Create branch from tag/commit/branch
+### Create branch
+
+Switch to the branch you want to create a new branch in.
+
+- From scratch:
 
 ```shell
-git branch -b <branch_name> <[tag|commit|branch]_name>
+git branch <branch_name>
+```
+
+- From tag/commit/branch:
+
+```shell
+git branch <branch_name> <[tag|commit|branch]_name>
 ```
 
 ### Switch to branch
-
-> You could switch to different branch to create new branch off of.
 
 ```shell
 git switch <branch_name>
@@ -301,7 +309,7 @@ git switch <branch_name>
 > If branch is already published, delete remote branch, create and push a new branch.
 
 ```shell
-git branch -m <new_name>
+git branch -M <new_name>
 ```
 
 ### Merge branch

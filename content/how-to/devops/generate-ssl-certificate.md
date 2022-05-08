@@ -1,11 +1,13 @@
 ---
-title: Generate SSH Keys
-sidebar_label: Generate SSL Keys
+title: Generate SSL Certificate
+sidebar_label: Generate SSL Certificate
 ---
 
 ## Install `OpenSSL`
 
 Download and install [OpenSSL binaries](https://wiki.openssl.org/index.php/Binaries).
+
+> Recommended: [slproweb](https://slproweb.com/products/Win32OpenSSL.html)
 
 ## Generate SSL Certificate
 

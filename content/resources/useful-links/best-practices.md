@@ -16,10 +16,5 @@ sidebar_label: Best Practices
 
 - [Keep a changelog](https://keepachangelog.com)
 
-## Git
 
-- [Conventional Commits](https://www.conventionalcommits.org)
 
-## Node.js
-
-- [goldbergyoni / nodebestpractices](https://github.com/goldbergyoni/nodebestpractices)

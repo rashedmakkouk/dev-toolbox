@@ -1,9 +1,9 @@
 ---
-title: Tools, Services & Material
-sidebar_label: Tools, Services & Material
+title: Tools & Services
+sidebar_label: Tools & Services
 ---
 
-## Tools & Services
+## SaaS
 
 - [Tools and resources for startups and entrepreneurs](https://startuplyst.pory.app)
 

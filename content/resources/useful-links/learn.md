@@ -1,6 +1,6 @@
 ---
-title: Learning
-sidebar_label: Learning
+title: Learn
+sidebar_label: Learn
 ---
 
 - [tldr-pages / tldr](https://github.com/tldr-pages/tldr)
