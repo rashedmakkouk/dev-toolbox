@@ -2,17 +2,16 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 /* eslint-disable @typescript-eslint/no-var-requires */
 
-const pluginContentDocs = require('./config/presets/plugin-content-docs');
-// const pluginContentPages = require('./config/presets/plugin-content-pages');
-const pluginSitemap = require('./config/presets/plugin-sitemap');
-const themeClassic = require('./config/presets/theme-classic');
-
+const pluginContentDocs = require('./config/plugins/plugin-content-docs');
+// const pluginContentPages = require('./config/plugins/plugin-content-pages');
+const pluginSitemap = require('./config/plugins/plugin-sitemap');
+const pluginGoogleGtag = require('./config/plugins/plugin-google-gtag');
 // const pwaPlugin = require('./config/plugins/plugin-pwa');
 
-// const algolia = require('./config/theme/algolia');
-// const pluginGoogleGtag = require('./config/theme/plugin-google-gtag');
-const prism = require('./config/theme/prism');
 
+const themeClassic = require('./config/presets/theme-classic');
+// const algolia = require('./config/theme/algolia');
+const prism = require('./config/theme/prism');
 const navbar = require('./config/theme/navbar');
 const footer = require('./config/theme/footer');
 
@@ -54,6 +53,7 @@ module.exports = {
         /** Debug defaults to true in dev, false in prod. */
         debug: undefined,
         docs: pluginContentDocs,
+        gtag: pluginGoogleGtag,
         // pages: pluginContentPages,
         sitemap: pluginSitemap,
         theme: themeClassic,
@@ -63,7 +63,6 @@ module.exports = {
   themeConfig:
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   ({
-    // ...pluginGoogleGtag,
     footer,
     navbar,
     prism,
