@@ -1,0 +1,23 @@
+{
+    "short_name": "dev-toolbox",
+    "name": "dev-toolbox",
+    "description": "Developer and DevOps resources and guides.",
+    "icons": [
+      {
+        "src": "/images/icons-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/images/icons-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/?source=pwa",
+    "background_color": "#eceff1",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#eceff1",
+    "shortcuts": []
+  }

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_rashedmakkouk_dev_toolbox=self.webpackChunk_rashedmakkouk_dev_toolbox||[]).push([[6973],{6964:function(e,o,t){t.r(o);var k=t(7294);o.default=function(){return k.createElement("div",{style:{height:200,width:"100%",backgroundColor:"yellow"}},"404")}}}]);
