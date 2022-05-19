@@ -1,7 +1,7 @@
 {
-    "short_name": "App-name Help Center",
-    "name": "App-name Help Center",
-    "description": "Information and guides to use the app",
+    "short_name": "dev-toolbox",
+    "name": "dev-toolbox",
+    "description": "Developer and DevOps resources and guides.",
     "icons": [
       {
         "src": "/images/icons-192.png",

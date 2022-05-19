@@ -1,3 +1,6 @@
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+
 module.exports.prism = {
   additionalLanguages: [
     'apacheconf',
@@ -19,5 +22,6 @@ module.exports.prism = {
     'tsx',
     'webmanifest',
   ],
-  theme: require('prism-react-renderer/themes/github'),
+  theme: lightCodeTheme,
+  darkTheme: darkCodeTheme,
 };

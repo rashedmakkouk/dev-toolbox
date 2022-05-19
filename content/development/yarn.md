@@ -1,6 +1,7 @@
 ---
 title: Yarn
 sidebar_label: Yarn
+sidebar_position: 2
 ---
 
 ## Commands

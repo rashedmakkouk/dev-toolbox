@@ -1,6 +1,7 @@
 ---
 title: TypeScript
 sidebar_label: TypeScript
+sidebar_position: 3
 ---
 
 ## Type Definitions

@@ -1,3 +1,5 @@
+const sidebarPath = require.resolve('../sidebars/main.js');
+
 module.exports = {
   /**
    * Path to data on filesystem relative to site dir.
@@ -7,7 +9,7 @@ module.exports = {
    * URL for editing a doc in the website repo.
    * Example: 'https://github.com/facebook/docusaurus/edit/master/website/'
    */
-  editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/',
+  editUrl: 'https://github.com/rashedmakkouk/dev-toolbox/edit/main/',
   /**
    * URL route for the docs section of your site.
    * *DO NOT* include a trailing slash.
@@ -18,7 +20,8 @@ module.exports = {
    * Path to sidebar configuration for showing a list of markdown pages.
    * Warning: will change
    */
-  sidebarPath: require.resolve('../sidebars/main.js'),
+  sidebarPath,
+  breadcrumbs: true,
   /**
    * Theme components used by the docs pages
    */

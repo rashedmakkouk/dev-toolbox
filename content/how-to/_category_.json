@@ -1,0 +1,9 @@
+{
+  "position": 4,
+  "label": "How-to",
+  "collapsible": true,
+  "collapsed": true,
+  "customProps": {
+    "description": "Guides and step-by-step tutorials."
+  }
+}

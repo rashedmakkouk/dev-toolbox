@@ -9,37 +9,38 @@ import styles from './styles.module.css';
 const features = [
   {
     title: 'Development',
-    imageUrl: 'images/undraw_docusaurus_mountain.svg',
-    description: <>.</>,
+    // imageUrl: 'images/*.svg',
+    description: <>Development resources.</>,
   },
   {
     title: 'DevOps',
-    imageUrl: 'images/undraw_docusaurus_tree.svg',
+    // imageUrl: 'images/*.svg',
     description: (
-      <>Resources about our terms of service and community guidelines.</>
+      <>DevOps resources.</>
     ),
   },
   {
     title: 'How-to',
-    imageUrl: 'images/undraw_docusaurus_react.svg',
-    description: <>.</>,
+    // imageUrl: 'images/*.svg',
+    description: <>Guides and step-by-step tutorials.</>,
   },
   {
     title: 'Resources',
-    imageUrl: 'images/undraw_docusaurus_react.svg',
-    description: <>.</>,
+    // imageUrl: 'images/*.svg',
+    description: <>General useful information.</>,
   },
   {
     title: 'Style Guide',
-    imageUrl: 'images/undraw_docusaurus_tree.svg',
+    // imageUrl: 'images/*.svg',
     description: (
-      <>Resources about our terms of service and community guidelines.</>
+      <>Best Practices, inspiration and useful links.</>
     ),
   },
 ];
 
 function Feature({ imageUrl, title, description }) {
   const imgUrl = useBaseUrl(imageUrl);
+
   return (
     <div className={clsx('col col--4', styles.feature)}>
       {imgUrl && (
@@ -54,17 +55,19 @@ function Feature({ imageUrl, title, description }) {
 }
 
 function Home() {
-  const context = useDocusaurusContext();
-  const { siteConfig = {} } = context;
+  const { siteConfig } = useDocusaurusContext();
+
+  const { title, tagline } = siteConfig;
+
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      title={title}
+      description={tagline}
     >
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <h1 className="hero__title">{title}</h1>
+          <p className="hero__subtitle">{tagline}</p>
           {/* <div className={styles.buttons}>
             <Link
               className={clsx(

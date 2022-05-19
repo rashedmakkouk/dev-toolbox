@@ -3,27 +3,27 @@ module.exports = {
     {
       label: 'Development',
       position: 'right',
-      to: 'development',
+      to: '/development',
     },
     {
       label: 'DevOps',
       position: 'right',
-      to: 'devops',
+      to: '/devops',
     },
     {
       label: 'How-to',
       position: 'right',
-      to: 'how-to',
+      to: '/how-to',
     },
     {
       label: 'Resources',
       position: 'right',
-      to: 'resources',
+      to: '/resources',
     },
     {
       label: 'Style Guide',
       position: 'right',
-      to: 'style-guide',
+      to: '/style-guide',
     },
   ],
   logo: {

@@ -1,3 +1,5 @@
+// @ts-check
+// Note: type annotations allow type checking and IDEs autocompletion
 /* eslint-disable @typescript-eslint/no-var-requires */
 
 const pluginContentDocs = require('./config/presets/plugin-content-docs');
@@ -15,10 +17,31 @@ const navbar = require('./config/theme/navbar');
 const footer = require('./config/theme/footer');
 
 module.exports = {
-  baseUrl: '/dev-toolbox/',
+  /** Info */
+  title: 'dev-toolbox',
+  tagline: 'A Dev Toolbox',
+  url: 'https://github.com/rashedmakkouk/dev-toolbox',
+  baseUrl: '/',
   favicon: 'images/favicon.ico',
+  /**
+   * GitHub pages deployment config.
+   * If you aren't using GitHub pages, you don't need these.
+   */
+  organizationName: 'rashedmakkouk',
+  projectName: 'dev-toolbox',
+  deploymentBranch: "build",
+  /** Config */ 
   onBrokenLinks: 'throw',
-  organizationName: 'org',
+  onBrokenMarkdownLinks: 'warn',
+  /**
+   * Even if you don't use internalization, you can use this field to set useful
+   * metadata like html lang. For example, if your site is Chinese, you may want
+   * to replace "en" with "zh-Hans".
+   */
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
   plugins: [
     // '@docusaurus/plugin-google-gtag',
     // pwaPlugin,
@@ -26,25 +49,24 @@ module.exports = {
   presets: [
     [
       '@docusaurus/preset-classic',
-      {
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
         /** Debug defaults to true in dev, false in prod. */
         debug: undefined,
         docs: pluginContentDocs,
         // pages: pluginContentPages,
         sitemap: pluginSitemap,
         theme: themeClassic,
-      },
+      }),
     ],
   ],
-  projectName: 'dev-toolbox',
-  tagline: 'A Dev - Toolbox',
-  themeConfig: {
+  themeConfig:
+  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+  ({
     // ...pluginGoogleGtag,
     footer,
     navbar,
     prism,
-  },
-  title: 'dev-toolbox',
+  }),
   trailingSlash: false,
-  url: 'https://domain-name.com',
 };

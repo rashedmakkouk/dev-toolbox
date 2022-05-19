@@ -1,7 +1,7 @@
 # Build
 #
-node_modules
-build
+/node_modules
+/build
 
 # Docusaurus
 #
@@ -11,18 +11,13 @@ build
 # Logs
 #
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Files
 #
 .DS_Store
-.idea
-*.iml
-*.code-workspace
-.changelog
-*.zip
-*.bak
-*.tgz
-*.gz
 !**/.gitkeep
 !**/README.md
 

@@ -1,3 +1,5 @@
+const customCss = require.resolve('../../src/css/custom.css');
+
 module.exports = {
-  customCss: require.resolve('../../src/css/custom.css'),
+  customCss,
 };
