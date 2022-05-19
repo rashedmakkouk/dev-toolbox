@@ -1,7 +1,8 @@
 # Build
 #
-/node_modules
-/build
+node_modules
+build
+*.code-workspace
 
 # Docusaurus
 #
@@ -18,6 +19,10 @@ yarn-error.log*
 # Files
 #
 .DS_Store
+**/*.zip
+**/*.bak
+**/*.tgz
+**/*.gz
 !**/.gitkeep
 !**/README.md
 
@@ -25,4 +30,3 @@ yarn-error.log*
 #
 *.env
 *.env.*
-*.code-workspace

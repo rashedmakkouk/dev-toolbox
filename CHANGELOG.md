@@ -4,6 +4,10 @@
 
 ### Features
 
+- feat: Bump package version from `0.20.0` to `0.21.0`
+  - Update `package.json` publish registry
+  - Add `publish-npm` GitHub Action workflow
+  - Update package `LICENSE` file
 - feat: Update `url` and `baseUrl` configuration attributes
 - feat: Enable `deploy-gh-pages` GitHub Action manual trigger
 - feat: Refactor `deploy-gh-pages` GitHub Action workflow
