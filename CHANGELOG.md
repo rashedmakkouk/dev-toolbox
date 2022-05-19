@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 0.21.0 (2021-05-20)
+
+### Features
+
+- feat: Bump package version from `0.21.1` to `0.21.2`
+- feat: Update plugins configuration attributes
+  - Configure `plugin-google-gtag` plugin
+  - Move configuration files to `config/plugins`
+
 ## 0.21.0 (2021-05-19)
 
 ### Features
