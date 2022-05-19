@@ -4,6 +4,7 @@
 
 ### Features
 
+- feat: Downgrade `engine` Package Manager version
 - feat: Bump package version from `0.20.0` to `0.21.0`
   - Update `package.json` publish registry
   - Add `publish-npm` GitHub Action workflow
