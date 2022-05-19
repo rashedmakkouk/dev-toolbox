@@ -4,6 +4,7 @@
 
 ### Features
 
+- feat: Update `url` and `baseUrl` configuration attributes
 - feat: Enable `deploy-gh-pages` GitHub Action manual trigger
 - feat: Refactor `deploy-gh-pages` GitHub Action workflow
 - feat: Bump package version from `0.19.0` to `0.20.0`

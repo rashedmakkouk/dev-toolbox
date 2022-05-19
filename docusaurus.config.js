@@ -20,8 +20,8 @@ module.exports = {
   /** Info */
   title: 'dev-toolbox',
   tagline: 'A Dev Toolbox',
-  url: 'https://github.com/rashedmakkouk/dev-toolbox',
-  baseUrl: '/',
+  url: 'https://rashedmakkouk.github.io',
+  baseUrl: '/dev-toolbox/',
   favicon: 'images/favicon.ico',
   /**
    * GitHub pages deployment config.
