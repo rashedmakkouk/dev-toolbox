@@ -1,5 +1,7 @@
 # Dev Toolbox
 
+[![Deploy to GitHub Pages](https://github.com/rashedmakkouk/dev-toolbox/actions/workflows/deploy-gh-pages.yml/badge.svg)](https://github.com/rashedmakkouk/dev-toolbox/actions/workflows/deploy-gh-pages.yml)
+
 ## [Development](./content/development/index.md)
 
 > Technical resources related to software programming & development environment.
