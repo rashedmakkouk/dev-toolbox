@@ -21,9 +21,9 @@ module.exports = {
       to: '/resources',
     },
     {
-      label: 'Style Guide',
+      label: 'Style Guides',
       position: 'right',
-      to: '/style-guide',
+      to: '/style-guides',
     },
   ],
   logo: {
