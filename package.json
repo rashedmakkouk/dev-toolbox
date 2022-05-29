@@ -10,8 +10,8 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">= 16.14.0",
-    "yarn": ">= 1.22.18"
+    "node": ">=16.14.0",
+    "yarn": ">=1.22.18"
   },
   "keywords": [
     "toolbox",
@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/rashedmakkouk/dev-toolbox#readme",
   "publishConfig": {
+    "access": "public",
     "registry": "https://registry.npmjs.org"
   },
   "files": [
