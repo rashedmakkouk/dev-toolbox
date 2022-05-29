@@ -8,7 +8,6 @@ const pluginSitemap = require('./config/plugins/plugin-sitemap');
 const pluginGoogleGtag = require('./config/plugins/plugin-google-gtag');
 // const pwaPlugin = require('./config/plugins/plugin-pwa');
 
-
 const themeClassic = require('./config/presets/theme-classic');
 // const algolia = require('./config/theme/algolia');
 const prism = require('./config/theme/prism');

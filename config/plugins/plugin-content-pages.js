@@ -9,7 +9,7 @@ module.exports = {
    * URL route for the page section of your site
    * do not include trailing slash
    */
-  routeBasePath: '.',
+  routeBasePath: '/',
   include: ['**/*.{js,jsx,ts,tsx,md,mdx}'],
   /**
    * No Route will be created for matching files

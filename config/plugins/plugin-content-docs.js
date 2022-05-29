@@ -16,6 +16,12 @@ module.exports = {
    */
   routeBasePath: '/',
   include: ['**/*.md', '**/*.mdx'], // Extensions to include.
+  exclude: [
+    '**/_*.{js,jsx,ts,tsx,md,mdx}',
+    '**/_*/**',
+    '**/*.test.{js,jsx,ts,tsx}',
+    '**/__tests__/**',
+  ],
   /**
    * Path to sidebar configuration for showing a list of markdown pages.
    * Warning: will change
@@ -27,6 +33,9 @@ module.exports = {
    */
   docLayoutComponent: '@theme/DocPage',
   docItemComponent: '@theme/DocItem',
+  docTagsListComponent:	'@theme/DocTagsListPage',
+  docTagDocListComponent: '@theme/DocTagDocListPage',
+  docCategoryGeneratedIndexComponent: '@theme/DocCategoryGeneratedIndexPage',
   /**
    * Remark and Rehype plugins passed to MDX
    */
@@ -84,6 +93,8 @@ module.exports = {
   /**
    * Sometimes you only want to include a subset of all available versions.
    * Tip: limit to 2 or 3 versions to improve startup and build time in dev and deploy previews
+   * 
+   * ex: ["current", "1.0.0", "2.0.0"]
    */
-  onlyIncludeVersions: undefined, // ex: ["current", "1.0.0", "2.0.0"]
+  onlyIncludeVersions: undefined,
 };
