@@ -9,7 +9,7 @@ const pluginGoogleGtag = require('./config/plugins/plugin-google-gtag');
 // const pwaPlugin = require('./config/plugins/plugin-pwa');
 
 const themeClassic = require('./config/presets/theme-classic');
-// const algolia = require('./config/theme/algolia');
+const algolia = require('./config/theme/theme-search-algolia');
 const prism = require('./config/theme/prism');
 const navbar = require('./config/theme/navbar');
 const footer = require('./config/theme/footer');
@@ -62,6 +62,7 @@ module.exports = {
   themeConfig:
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   ({
+    algolia,
     footer,
     navbar,
     prism,
