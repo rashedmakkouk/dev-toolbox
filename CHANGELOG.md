@@ -1,5 +1,30 @@
 # CHANGELOG
 
+## 0.21.0 (2021-05-30)
+
+### Features
+
+- feat: Bump package version from `0.21.2` to `0.22.0`
+- feat: Add `Algolia DocSearch` content search support
+  - Configure and connect `Algolia` App
+  - Add plugin configuration
+  - Add custom styling variables
+  - Rename `algolia` configuration file to `theme-search-algolia`
+
+## 0.21.0 (2021-05-29)
+
+### Changed
+
+- chore: Update SSG configuration files
+- chore: Rename `Style Guide` section to `Style Guides`
+- chore: Move publish `access` configuration to `package.json`
+
+### Features
+
+- feat: Update `README.md` and content metadata
+- feat: Move `Yarn` from Development to DevOps section
+- feat: Upgrade package dependencies --latest (SSG)
+
 ## 0.21.0 (2021-05-20)
 
 ### Features
@@ -46,7 +71,7 @@
 - feat: Update package configuration
   - Bump package version from `0.18.0` to `0.19.0`
   - Update package changelog
-  - Upggrade package dependencies --latest
+  - Upgrade package dependencies --latest
   - Update Docusaurus configuratin files
   - Add `.markdownlint.json` config file
 - feat: Update documentation content
@@ -115,7 +140,7 @@
 ### Features
 
 - feat: Bump package version from `0.13.0` to `0.14.0`
-- chore: Upggrade package dependencies --latest
+- feat: Upgrade package dependencies --latest
 - feat: Add `Assets` section in `Useful Links`
 - feat: Update `Git` content in `DevOps`
 - feat: Update `Linux` content in `DevOps`
@@ -141,7 +166,7 @@
 
 ## 0.12.0 (2021-02-25)
 
-### Changes
+### Changed
 
 - refactor: Normalize sidebars navigation files hierarchy
 
@@ -154,7 +179,7 @@
 
 ## 0.11.0 (2021-02-23)
 
-### Changes
+### Changed
 
 - refactor: Revamp `GitLab` documentation directory structure
 
