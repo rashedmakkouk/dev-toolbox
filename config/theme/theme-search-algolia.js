@@ -1,4 +1,4 @@
-const appId = 'YAQ2FODZFV4';
+const appId = 'AQ2FODZFV4';
 const apiKey = '37ee5d19b3ff7613190da238a2b91c0b';
 const indexName = 'rashedmakkouk__dev-toolbox';
 const siteUrl = 'https://rashedmakkouk.github.io/dev-toolbox';
@@ -16,6 +16,8 @@ const searchableAttributes = [
   'content',
 ];
 
+// DocSearch Config Template
+// https://docsearch.algolia.com/docs/templates/#docusaurus-v2-template
 const recordExtractor = {
   indexName,
   pathsToMatch: [`${siteUrl}/**`],
