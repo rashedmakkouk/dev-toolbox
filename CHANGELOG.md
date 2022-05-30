@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 0.22.0 (2021-05-30)
+
+### Features
+
+- feat: Bump package version from `0.22.0` to `0.22.1`
+
+### Fixed
+
+- fix: Update Algolia 'Application ID' API Key
+
 ## 0.21.0 (2021-05-30)
 
 ### Features
