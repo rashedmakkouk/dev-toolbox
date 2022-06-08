@@ -8,6 +8,7 @@
 
 ### Features
 
+- feat: Bump package version from `0.22.2` to `0.22.3`
 - feat: Bump package version from `0.22.1` to `0.22.2`
 
 ## 0.22.0 (2021-05-30)
