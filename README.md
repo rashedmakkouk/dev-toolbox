@@ -78,4 +78,4 @@ the full license text.
 [changelog]: https://github.com/rashedmakkouk/dev-toolbox/blob/main/CHANGELOG.md
 [dev-toolbox-website]: https://rashedmakkouk.github.io/dev-toolbox
 [bsd-3-clause-license]: https://opensource.org/licenses/BSD-3-Clause
-[license-file]: https://github.com/rashedmakkouk/redux-toolkit/blob/main/LICENSE
+[license-file]: https://github.com/rashedmakkouk/dev-toolbox/blob/main/LICENSE
