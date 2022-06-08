@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 0.22.0 (2021-06-08)
+
+### Changed
+
+- chore: Update package license to `BSD 3-Clause License`
+
+### Features
+
+- feat: Bump package version from `0.22.1` to `0.22.2`
+
 ## 0.22.0 (2021-05-30)
 
 ### Features
