@@ -30,7 +30,7 @@ const features = [
     description: <>General useful information.</>,
   },
   {
-    title: 'Style Guide',
+    title: 'Style Guides',
     // imageUrl: 'images/*.svg',
     description: (
       <>Best Practices, inspiration and useful links.</>

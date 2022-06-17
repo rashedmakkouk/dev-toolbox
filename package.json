@@ -8,7 +8,7 @@
     "email": "rashed.makkouk@outlook.com",
     "url": "https://twitter.com/rashedmakkouk"
   },
-  "license": "BSD 3-Clause",
+  "license": "BSD-3-Clause",
   "engines": {
     "node": ">=16.14.0",
     "yarn": ">=1.22.18"
