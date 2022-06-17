@@ -1,9 +1,10 @@
-const appId = 'AQ2FODZFV4';
-const apiKey = '37ee5d19b3ff7613190da238a2b91c0b';
-const indexName = 'rashedmakkouk__dev-toolbox';
+const appId = '1IDYNXY0Y3';
+const apiKey = '4d1566247828a6598bc5712a1862dec5';
+const indexName = 'dev-toolbox';
 const siteUrl = 'https://rashedmakkouk.github.io/dev-toolbox';
 
 const rateLimit = 8;
+const schedule = "at 12:00 AM on Monday";
 
 const placeholder = 'Search docs...';
 
@@ -36,7 +37,7 @@ const recordExtractor = {
           selectors: '',
           defaultValue: lvl0,
         },
-        lvl1: 'header h1',
+        lvl1: ['header h1', 'article h1'],
         lvl2: 'article h2',
         lvl3: 'article h3',
         lvl4: 'article h4',
@@ -44,8 +45,9 @@ const recordExtractor = {
         lvl6: 'article h6',
         content: 'article p, article li, article td:last-child',
       },
-      indexHeadings: true,
       aggregateContent: true,
+      indexHeadings: true,
+      recordVersion: "v3",
     });
   },
 };
@@ -166,10 +168,11 @@ module.exports = {
   // to navigate with window.location.href to them.
   // externalUrlRegex: 'external\\.com|domain\\.com',
   placeholder,
+  renderJavaScript: false,
   // Optional: path for search page that enabled by default (`false` to disable it)
   searchPagePath: 'search',
   rateLimit,
-  startUrls: [`${siteUrl}/`],
+  startUrls: [siteUrl],
   // Restrict duplicate content in results.
   // https://docsearch.algolia.com/docs/legacy/faq/#why-do-i-have-duplicate-content-in-my-results
   // Exclude all URLs ending with / or index.html
@@ -177,6 +180,7 @@ module.exports = {
   sitemaps: [`${siteUrl}/sitemap.xml`],
   ignoreCanonicalTo: true,
   discoveryPatterns: [`${siteUrl}/**`],
+  schedule,
   actions: [recordExtractor],
   initialIndexSettings,
   rules: [],
