@@ -1,8 +1,19 @@
 # CHANGELOG
 
+## 0.22.0 (2021-06-17)
+
+### Changes
+
+- chore: Minor text updates
+
+### Features
+
+- feat: Bump package version from `0.22.6` to `0.23.0`
+- feat: Update `Algolia DocSearch` configuration
+
 ## 0.22.0 (2021-06-08)
 
-### Changed
+### Changes
 
 - chore: Update package license to `BSD 3-Clause License`
 
@@ -37,7 +48,7 @@
 
 ## 0.21.0 (2021-05-29)
 
-### Changed
+### Changes
 
 - chore: Update SSG configuration files
 - chore: Rename `Style Guide` section to `Style Guides`
@@ -190,7 +201,7 @@
 
 ## 0.12.0 (2021-02-25)
 
-### Changed
+### Changes
 
 - refactor: Normalize sidebars navigation files hierarchy
 
@@ -203,7 +214,7 @@
 
 ## 0.11.0 (2021-02-23)
 
-### Changed
+### Changes
 
 - refactor: Revamp `GitLab` documentation directory structure
 
