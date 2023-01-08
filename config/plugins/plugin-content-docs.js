@@ -1,3 +1,9 @@
+/* eslint-disable sort-keys */
+
+/**
+ * {@link https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-docs}
+ */
+
 const sidebarPath = require.resolve('../sidebars/main.js');
 
 module.exports = {
@@ -33,7 +39,7 @@ module.exports = {
    */
   docLayoutComponent: '@theme/DocPage',
   docItemComponent: '@theme/DocItem',
-  docTagsListComponent:	'@theme/DocTagsListPage',
+  docTagsListComponent: '@theme/DocTagsListPage',
   docTagDocListComponent: '@theme/DocTagDocListPage',
   docCategoryGeneratedIndexComponent: '@theme/DocCategoryGeneratedIndexPage',
   /**
@@ -75,7 +81,7 @@ module.exports = {
   /**
    * The docusaurus versioning defaults don't make sense for all projects
    * This gives the ability customize the label and path of each version
-   * You may not like that default versin
+   * You may not like that default version
    */
   versions: {
     /*
@@ -92,8 +98,10 @@ module.exports = {
   },
   /**
    * Sometimes you only want to include a subset of all available versions.
-   * Tip: limit to 2 or 3 versions to improve startup and build time in dev and deploy previews
-   * 
+   *
+   * Tip: limit to 2 or 3 versions to improve startup and build time in dev and
+   * deploy previews
+   *
    * ex: ["current", "1.0.0", "2.0.0"]
    */
   onlyIncludeVersions: undefined,

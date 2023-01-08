@@ -64,6 +64,7 @@ your ideas and suggestions.
 
 - [`Ideas`][discussions-ideas]
 - [`Q&A`][discussions-q-a]
+- [`Issues`][issues]
 
 ## License
 

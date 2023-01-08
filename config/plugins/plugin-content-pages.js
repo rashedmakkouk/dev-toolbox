@@ -1,21 +1,24 @@
+/* eslint-disable sort-keys */
+
 module.exports = {
   /**
-   * Path to data on filesystem
-   * relative to site dir
-   * components in this directory will be automatically converted to pages
+   * Path to data on filesystem.
+   * relative to site dir.
+   * components in this directory will be automatically converted to pages.
    */
   path: 'pages',
   /**
-   * URL route for the page section of your site
-   * do not include trailing slash
+   * URL route for the page section of your site.
+   * do not include trailing slash.
    */
   routeBasePath: '/',
   include: ['**/*.{js,jsx,ts,tsx,md,mdx}'],
   /**
-   * No Route will be created for matching files
+   * No Route will be created for matching files.
    */
   exclude: [
     '**/_*.{js,jsx,ts,tsx,md,mdx}',
+    '**/_*/**',
     '**/*.test.{js,ts}',
     '**/__tests__/**',
   ],
@@ -24,7 +27,7 @@ module.exports = {
    */
   mdxPageComponent: '@theme/MDXPage',
   /**
-   * Remark and Rehype plugins passed to MDX
+   * Remark and Rehype plugins passed to MDX.
    */
   remarkPlugins: [],
   rehypePlugins: [],

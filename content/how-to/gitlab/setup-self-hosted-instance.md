@@ -71,7 +71,7 @@ sudo dpkg -i gitlab-ee_xx.x.x-ee.0_amd64.deb
 > /etc/gitlab.rb
 
 > Stop GitLab services by executing `gitlab-ctl stop` command before making and saving changes.\
-> Execute `gitlab-ctl reconfigre` command to commit changes.
+> Execute `gitlab-ctl reconfigure` command to commit changes.
 
 ## [OMNIBUS CONFIG README][omnibus-gitlab-readme]
 

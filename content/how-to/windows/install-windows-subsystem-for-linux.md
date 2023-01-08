@@ -3,13 +3,14 @@ title: Install Windows Subsystem for Linux
 sidebar_label: Install Windows Subsystem for Linux
 ---
 
-Check out the official [Manual Installation Steps](https://docs.microsoft.com/en-us/windows/wsl/install-win10#manual-installation-steps) guide.
+Check out the official [Manual Installation Steps][manual-installation-steps] guide.
 
 > Addititional steps to get the whole experience are explained below.
 
 ## Distributations
 
-Goto [Microsoft Store](https://aka.ms/wslstore) for a list of available Linux distributions flavors to download.
+Goto [Microsoft Store](https://aka.ms/wslstore) for a list of available Linux distributions flavors
+to download.
 
 ## IDE
 
@@ -33,13 +34,14 @@ Add new entry `%LOCALAPPDATA%\Programs\Microsoft VS Code\bin`
 
 On `Linux`
 
-Follow [Windows as a Linux developer machine](https://code.visualstudio.com/docs/setup/linux#_windows-as-a-linux-developer-machine) official guide.
+Follow [Windows as a Linux developer machine][windows-as-a-linux-developer-machine] official guide.
 
 On `macOS`
 
-Follow [Launching from the command line](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) official guide.
+Follow [Launching from the command line][launching-from-the-command-line] official guide.
 
-> Run `code .` command inside a development directory from any WSL terminal and you should see `Installing VS Code Server for x64` message.
+> Run `code .` command inside a development directory from any WSL terminal and you should see
+> `Installing VS Code Server for x64` message.
 
 #### Extensions
 
@@ -56,4 +58,9 @@ Follow [Launching from the command line](https://code.visualstudio.com/docs/setu
 
 ## What's Next
 
-Head over to [Windows](../../devops/windows.md) documentation under DevOps section for more usage instructions and details.
+Head over to [Windows](../../devops/windows.md) documentation under DevOps section for more usage
+instructions and details.
+
+[windows-as-a-linux-developer-machine]: https://code.visualstudio.com/docs/setup/linux#_windows-as-a-linux-developer-machine
+[launching-from-the-command-line]: https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
+[manual-installation-steps]: https://docs.microsoft.com/en-us/windows/wsl/install-win10#manual-installation-steps

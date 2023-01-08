@@ -28,13 +28,13 @@ sidebar_label: Markdown
 
 ### Emphasis
 
-Emphasis, aka italics, with *asterisks* or _underscores_.
+Emphasis, aka italics, with *asterisks* or *underscores*.
 
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
+Strong emphasis, aka bold, with **asterisks** or **underscores**.
 
-Combined emphasis with **asterisks and _underscores_**.
+Combined emphasis with **asterisks and *underscores***.
 
-Strikethrough uses two tildes. ~~Scratch this.~~
+Strike-through uses two tildes. ~~Scratch this.~~
 
 ### Lists
 
@@ -63,7 +63,9 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 Or leave it empty and use the [link text itself].
 
-URLs and URLs in angle brackets will automatically get turned into links. <http://www.example.com> or <http://www.example.com> and sometimes example.com (but not on GitHub, for example).
+URLs and URLs in angle brackets will automatically get turned into links.
+<http://www.example.com> or <http://www.example.com> and sometimes example.com (but not on GitHub,
+for example).
 
 Some text to show that the reference links can follow later.
 
@@ -99,7 +101,7 @@ s = "Python syntax highlighting"
 print(s)
 ```
 
-```
+```shell
 No language indicated, so no syntax highlighting.
 But let's throw in a <b>tag</b>.
 ```
@@ -114,11 +116,12 @@ Colons can be used to align columns.
 | col 2 is      |   centered    |   \$12 |
 | zebra stripes |   are neat    |    \$1 |
 
-There must be at least 3 dashes separating each header cell. The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
+There must be at least 3 dashes separating each header cell. The outer pipes (|) are optional, and
+you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
 
 | Markdown | Less      | Pretty     |
 | -------- | --------- | ---------- |
-| _Still_  | `renders` | **nicely** |
+| *Still*  | `renders` | **nicely** |
 | 1        | 2         | 3          |
 
 ### Blockquotes
@@ -129,7 +132,7 @@ Quote break.
 
 > This is a very long line that will still be quoted properly when it wraps. Oh
 boy let's keep writing to make sure this is long enough to actually wrap for
-everyone. Oh, you can _put_ **Markdown** into a blockquote.
+everyone. Oh, you can *put* **Markdown** into a blockquote.
 
 ### Inline HTML
 
@@ -148,10 +151,10 @@ Here's a line for us to start with.
 ---
 
 This line is separated from the one above by two newlines, so it will be a
-_separate paragraph_.
+*separate paragraph*.
 
 This line is also a separate paragraph, but... This line is only separated by a
-single newline, so it's a separate line in the _same paragraph_.
+single newline, so it's a separate line in the *same paragraph*.
 
 ## Static Site Generator (SSG)
 

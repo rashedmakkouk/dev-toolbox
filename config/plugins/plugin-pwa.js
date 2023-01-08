@@ -1,8 +1,17 @@
+/* eslint-disable sort-keys */
+
+/**
+ * {@link https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-pwa}
+ */
 module.exports = [
   '@docusaurus/plugin-pwa',
   {
     debug: true,
-    offlineModeActivationStrategies: ['appInstalled', 'queryString'],
+    offlineModeActivationStrategies: [
+      'appInstalled',
+      'standalone',
+      'queryString',
+    ],
     pwaHead: [
       {
         tagName: 'link',

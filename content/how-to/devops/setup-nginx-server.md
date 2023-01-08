@@ -17,7 +17,7 @@ predefined minimum configuration.
 
 ## Configuration
 
-### nginx.conf
+### conf
 
 > conf/nginx.conf
 
@@ -47,7 +47,7 @@ server blocks by configuring `proxy_pass` key within a `location`.
 ### Sites
 
 List of server blocks used to listen to and proxy incoming requests. Sites are loaded in Nginx
-root [config](#nginx.conf) file.
+root [config](#conf) file.
 
 > conf/sites-available: Inactive
 

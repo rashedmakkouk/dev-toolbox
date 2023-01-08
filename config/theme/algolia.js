@@ -1,10 +1,14 @@
+/* eslint-disable sort-keys */
+
 const appId = '1IDYNXY0Y3';
 const apiKey = '4d1566247828a6598bc5712a1862dec5';
 const indexName = 'dev-toolbox';
 const siteUrl = 'https://rashedmakkouk.github.io/dev-toolbox';
 
 const rateLimit = 8;
-const schedule = "at 12:00 AM on Monday";
+const schedule = 'at 12:00 AM on Monday';
+const paginationLimitedTo = 1000;
+const hitsPerPage = 20;
 
 const placeholder = 'Search docs...';
 
@@ -17,15 +21,20 @@ const searchableAttributes = [
   'content',
 ];
 
-// DocSearch Config Template
-// https://docsearch.algolia.com/docs/templates/#docusaurus-v2-template
+/**
+ * {@link https://docsearch.algolia.com/docs/templates/#docusaurus-v2-template | DocSearch Config Template}
+ */
 const recordExtractor = {
   indexName,
   pathsToMatch: [`${siteUrl}/**`],
   recordExtractor: ({ $, helpers }) => {
-    // priority order: deepest active sub list header -> navbar active item -> 'Documentation'
+    /**
+     * Priority order:
+     * deepest active sub list header -\> navbar active item -\> 'Documentation'
+     */
     const lvl0 =
       $(
+        /* eslint-disable max-len */
         '.menu__link.menu__link--sublist.menu__link--active, .navbar__item.navbar__link--active'
       )
         .last()
@@ -47,13 +56,14 @@ const recordExtractor = {
       },
       aggregateContent: true,
       indexHeadings: true,
-      recordVersion: "v3",
+      recordVersion: 'v3',
     });
   },
 };
 
-// DocSearch Config Template
-// https://docsearch.algolia.com/docs/templates/#docusaurus-v2-template
+/**
+ * {@link https://docsearch.algolia.com/docs/templates/#docusaurus-v2-template | DocSearch Config Template}
+ */
 const initialIndexSettings = {
   [indexName]: {
     attributesForFaceting: [
@@ -114,13 +124,13 @@ const initialIndexSettings = {
     ],
     minWordSizefor1Typo: 3,
     minWordSizefor2Typos: 7,
-    hitsPerPage: 20,
+    hitsPerPage,
     maxValuesPerFacet: 100,
     attributesToIndex: null,
     numericAttributesToIndex: null,
     unretrievableAttributes: null,
     optionalWords: null,
-    paginationLimitedTo: 1000,
+    paginationLimitedTo,
     exactOnSingleWordQuery: 'attribute',
     ranking: [
       'words',
@@ -134,10 +144,7 @@ const initialIndexSettings = {
     ],
     queryType: 'prefixLast',
     snippetEllipsisText: '',
-    alternativesAsExact: [
-      'ignorePlurals',
-      'singleWordSynonym'
-    ],
+    alternativesAsExact: ['ignorePlurals', 'singleWordSynonym'],
     highlightPreTag: '<span class="algolia-docsearch-suggestion--highlight">',
     highlightPostTag: '</span>',
     allowTyposOnNumericTokens: false,
@@ -151,8 +158,10 @@ const initialIndexSettings = {
 };
 
 module.exports = {
-  // Search-Only Public API key.
-  // https://docsearch.algolia.com/docs/legacy/faq/#can-i-share-the-apikey-in-my-repo
+  /**
+   * Search-Only Public API key.
+   * {@link https://docsearch.algolia.com/docs/legacy/faq/#can-i-share-the-apikey-in-my-repo | Can I share the apiKey in my repo}
+   */
   apiKey,
   indexName,
   // The application ID provided by Algolia
@@ -173,9 +182,11 @@ module.exports = {
   searchPagePath: 'search',
   rateLimit,
   startUrls: [siteUrl],
-  // Restrict duplicate content in results.
-  // https://docsearch.algolia.com/docs/legacy/faq/#why-do-i-have-duplicate-content-in-my-results
-  // Exclude all URLs ending with / or index.html
+  /**
+   * Restrict duplicate content in results.
+   * {@link https://docsearch.algolia.com/docs/legacy/faq/#why-do-i-have-duplicate-content-in-my-results | Why do I have duplicate content in my results}
+   * Exclude all URLs ending with / or index.html
+   */
   stop_urls: ['/$', '/index.html$'],
   sitemaps: [`${siteUrl}/sitemap.xml`],
   ignoreCanonicalTo: true,

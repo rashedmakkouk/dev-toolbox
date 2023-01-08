@@ -13,7 +13,7 @@ Check database size:
 sudo du -sh /var/opt/gitlab/postgresql/data
 ```
 
-Confirm enough free space is availble:
+Confirm enough free space is available:
 
 ```shell
 sudo df -h

@@ -5,7 +5,7 @@ sidebar_label: Setup Git Commit Linting
 
 ## Prerequisites
 
-> Excecute `yarn init` and `git init` commands before you proceed.
+> Execute `yarn init` and `git init` commands before you proceed.
 
 Install the following packages:
 

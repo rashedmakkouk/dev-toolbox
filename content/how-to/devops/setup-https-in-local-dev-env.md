@@ -48,7 +48,8 @@ Configure the operating system to trust the root certificate and all signed cert
 
 - Go to `Keychain Access` -> `Certificates`.
 - File -> Import Items -> `rootCA.pem`.
-- Double click on the imported certificate: Select `Always Trust` under `When using this certificate:` dropdown -> `Trust` section.
+- Double click on the imported certificate:
+  Select `Always Trust` under `When using this certificate:` dropdown -> `Trust` section.
 
 ## Create domain SSL certificate
 
@@ -91,7 +92,8 @@ DNS.1 = localhost
 openssl req -new -sha256 -nodes -out server.csr -newkey rsa:2048 -keyout server.key -config <( cat server.csr.cnf )
 ```
 
-A certificate signing request is issued via the root SSL certificate created earlier to create a domain certificate for `localhost`.
+A certificate signing request is issued via the root SSL certificate created earlier to create a
+domain certificate for `localhost`.
 
 The output is a certificate file called `server.crt`.
 

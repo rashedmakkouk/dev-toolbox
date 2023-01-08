@@ -1,4 +1,5 @@
 // @ts-check
+/* eslint-disable sort-keys */
 // Note: type annotations allow type checking and IDEs autocompletion
 /* eslint-disable @typescript-eslint/no-var-requires */
 
@@ -9,7 +10,7 @@ const pluginGoogleGtag = require('./config/plugins/plugin-google-gtag');
 // const pwaPlugin = require('./config/plugins/plugin-pwa');
 
 const themeClassic = require('./config/presets/theme-classic');
-const algolia = require('./config/theme/theme-search-algolia');
+const algolia = require('./config/theme/algolia');
 const prism = require('./config/theme/prism');
 const navbar = require('./config/theme/navbar');
 const footer = require('./config/theme/footer');
@@ -27,8 +28,8 @@ module.exports = {
    */
   organizationName: 'rashedmakkouk',
   projectName: 'dev-toolbox',
-  deploymentBranch: "build",
-  /** Config */ 
+  deploymentBranch: 'build',
+  /** Config */
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   /**
@@ -47,7 +48,7 @@ module.exports = {
   presets: [
     [
       '@docusaurus/preset-classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
+      /** @type import('\@docusaurus/preset-classic').Options */
       ({
         /** Debug defaults to true in dev, false in prod. */
         debug: undefined,
@@ -60,12 +61,12 @@ module.exports = {
     ],
   ],
   themeConfig:
-  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-  ({
-    algolia,
-    footer,
-    navbar,
-    prism,
-  }),
+    /** @type import('\@docusaurus/preset-classic').ThemeConfig */
+    ({
+      algolia,
+      footer,
+      navbar,
+      prism,
+    }),
   trailingSlash: false,
 };

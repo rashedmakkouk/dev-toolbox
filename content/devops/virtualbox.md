@@ -17,7 +17,7 @@ mount /dev/cdrom /media/cdrom
 
 3. Install dependencies:
 
-```
+```shell
 apt-get update && \
   apt-get install build-essential dkms linux-headers-$(uname -r)
 ```

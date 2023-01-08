@@ -15,6 +15,3 @@ sidebar_label: Best Practices
 ## Project Management
 
 - [Keep a changelog](https://keepachangelog.com)
-
-
-

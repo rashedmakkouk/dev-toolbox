@@ -114,11 +114,13 @@ SET sql_mode=(SELECT CONCAT(@@sql_mode,',ONLY_FULL_GROUP_BY',''));
 
 `services`
 
-Service properties can be overriden in the location that it was extended in.
+Service properties can be overridden in the location that it was extended in.
 
 `env_file`
 
-Respective `.env` file is loaded from the context in which `docker-compose` command is run. If a service is extended, properties defined in its own `.env` file, must also be defined in the `.env` file where it is extended.
+Respective `.env` file is loaded from the context in which `docker-compose` command is run. If a
+service is extended, properties defined in its own `.env` file, must also be defined in the `.env`
+file where it is extended.
 
 `networks`
 
