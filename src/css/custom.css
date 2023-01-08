@@ -84,3 +84,25 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
       var(--ifm-color-emphasis-100) 100%
     );
   }
+
+  #__docusaurus > footer > div > div.text--center > div > a {
+    color: unset;
+  }
+  
+  #__docusaurus > footer > div > div.text--center > div > a:hover {
+    color: var(--ifm-link-color);
+    text-decoration: underline;
+  }
+  
+  .padding--8 {
+    padding: 8px;
+  }
+  
+  .padding--16 {
+    padding: 16px;
+  }
+  
+  img[alt="__image-512"] {
+    height: 512;
+    width: auto;
+  }
