@@ -3,18 +3,6 @@ title: Git
 sidebar_label: Git
 ---
 
-## Changelog
-
-### Output commits metadata
-
-```shell
-git log --oneline --decorate
-
-git log --pretty="- %s" > CHANGELOG.md
-
-git log --stat
-```
-
 ## Config
 
 ### Show current configuration
@@ -55,6 +43,18 @@ git push --set-upstream origin master
 git push -u origin master
 ```
 
+## Changelog
+
+### Output commits metadata
+
+```shell
+git log --oneline --decorate
+
+git log --pretty="- %s" > CHANGELOG.md
+
+git log --stat
+```
+
 ## Repository
 
 ### Create a new repository
@@ -92,14 +92,14 @@ git push -u origin --tags
 
 ## Staging
 
-### Unstage (but retain) all changes since last commit
+### Un-stage (but retain) all changes since last commit
 
 ```shell
 git reset
 git reset --soft HEAD~1
 ```
 
-### Unstage (& discard) all changes since last commit
+### Un-stage (& discard) all changes since last commit
 
 ```shell
 git reset --hard
@@ -111,14 +111,14 @@ git reset --hard
 git reset --hard <commit_sha>
 ```
 
-### Unstage file(s) or directory to last commit
+### Un-stage file(s) or directory to last commit
 
 ```shell
 git reset HEAD -- <filename>
 git reset HEAD -- .
 ```
 
-### Discard changes to unstaged file(s)
+### Discard changes to un-staged file(s)
 
 ```shell
 git checkout -- <filename>
@@ -192,7 +192,7 @@ Multiple scopes are supported (delimiter options: "/", "\\", ",").
 #### Types
 
 - `BREAKING CHANGE`:
-- `build`: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+- `build`: Changes that affect the build system or external dependencies (example scopes: gulp, npm)
 - `chore`: Changes to the build process or auxiliary tools and libraries
 - `ci`: Changes to our CI configuration files and scripts (example scopes: Circle, BrowserStack, SauceLabs)
 - `deprecate`:
@@ -416,7 +416,7 @@ git push origin -d <tag_name>
 
 ## Stash
 
-### Save changes to stach
+### Save changes to Stash
 
 ```shell
 git stash save "<message>"
@@ -447,7 +447,7 @@ git stash apply <stash>
 Apply changes and remove files from the stash:
 
 ```shell
-git stash pop <stach>
+git stash pop <Stash>
 ```
 
 > Use `merge` procedures to resolve conflicts.
@@ -459,7 +459,13 @@ git stash drop <stash>
 git stash clear
 ```
 
-## Misc
+## Git Ignore
+
+### Find which .gitignore file is applied to a path
+
+```shell
+git check-ignore -v --no-index path/to/check
+```
 
 ### List files to update from `.gitignore`
 
@@ -487,6 +493,8 @@ git rm -r -n --cached `git ls-files -i --exclude-from=.gitignore`
 
 Commit changes and push to origin to remove/update from remote repository.
 
+## Files
+
 ### List modified files
 
 By duration:
@@ -508,6 +516,12 @@ hour
 week  
 month  
 
+### Show file changes history
+
+```shell
+git log --full-history -- path/to/file.js
+```
+
 ### Clear working tree cache
 
 ```shell
@@ -526,4 +540,4 @@ git reset HEAD .
 git reset HEAD~1
 ```
 
-> If commited.
+> If committed.
